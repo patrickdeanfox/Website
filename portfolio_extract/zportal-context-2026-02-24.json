@@ -1,0 +1,3061 @@
+[
+  {
+    "id": "096b5e0a-48b0-48c5-9050-324c91fbb405",
+    "name": "Boulder Home",
+    "slug": "boulder-home",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/boulder-home",
+    "tags": [
+      "Boulder"
+    ],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2025-12-12T17:12:35.297046+00:00",
+    "updated_at": "2025-12-29T20:09:54.201145+00:00",
+    "extractedAt": "2026-02-24T21:00:12.751Z",
+    "theme": {
+      "template": {
+        "header": true,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 100,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 2
+    },
+    "blockHidden": [],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [],
+    "javascripts": {
+      "onPageLoad": []
+    },
+    "pageStructure": {
+      "blockCount": 1,
+      "blockUUIDs": [
+        "53b8b424-7b7e-4c39-aa81-dc1c6fadcfe8"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "53b8b424-7b7e-4c39-aa81-dc1c6fadcfe8": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "md": {
+          "53b8b424-7b7e-4c39-aa81-dc1c6fadcfe8": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "sm": {
+          "53b8b424-7b7e-4c39-aa81-dc1c6fadcfe8": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "53b8b424-7b7e-4c39-aa81-dc1c6fadcfe8",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 53b8b424-7b7e-4c39-aa81-dc1c6fadcfe8."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  },
+  {
+    "id": "7c5af9b4-ff66-4b0e-9ebf-f553907d8f0d",
+    "name": "Profit Center Utilization",
+    "slug": "profit-center-utilization",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/profit-center-utilization",
+    "tags": [
+      "Boulder",
+      "PC-PIT"
+    ],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2025-12-19T17:46:31.896319+00:00",
+    "updated_at": "2026-02-19T21:31:29.295308+00:00",
+    "extractedAt": "2026-02-24T21:00:12.751Z",
+    "theme": {
+      "template": {
+        "header": false,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 100,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 1
+    },
+    "blockHidden": [
+      "6222bed2-6b16-480d-b61a-fa5762303578",
+      "9bb0b522-102e-493b-a07c-a34b705062c9",
+      "2413a39e-f167-4c88-9e13-5781e51457a4"
+    ],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [
+      ".content {",
+      "    overflow-x: hidden !important;",
+      "}"
+    ],
+    "javascripts": {
+      "onPageLoad": []
+    },
+    "pageStructure": {
+      "blockCount": 9,
+      "blockUUIDs": [
+        "0a79cdea-6993-40cc-8b5e-8e748cf40993",
+        "6222bed2-6b16-480d-b61a-fa5762303578",
+        "9bb0b522-102e-493b-a07c-a34b705062c9",
+        "04516a31-eaf8-4f9d-8729-a6cb09849778",
+        "a84f91d7-15c3-4486-bdf5-38cb1eaf733a",
+        "482e49ba-79e8-4945-876f-04505998f3f4",
+        "2413a39e-f167-4c88-9e13-5781e51457a4",
+        "2bec6d0b-2abc-40cb-9fa1-3c8d2551cadf",
+        "0c963519-e7f8-4226-abab-6d8f56065b36"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "0a79cdea-6993-40cc-8b5e-8e748cf40993": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "6222bed2-6b16-480d-b61a-fa5762303578": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "9bb0b522-102e-493b-a07c-a34b705062c9": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "04516a31-eaf8-4f9d-8729-a6cb09849778": {
+            "left": 17,
+            "top": 1,
+            "height": 14,
+            "width": 39,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "a84f91d7-15c3-4486-bdf5-38cb1eaf733a": {
+            "left": 57,
+            "top": 1,
+            "height": 14,
+            "width": 41,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 1,
+            "height": 26,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2413a39e-f167-4c88-9e13-5781e51457a4": {
+            "left": 19,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2bec6d0b-2abc-40cb-9fa1-3c8d2551cadf": {
+            "left": 1,
+            "top": 28,
+            "height": 24,
+            "width": 15,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "0c963519-e7f8-4226-abab-6d8f56065b36": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 17,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "md": {
+          "0a79cdea-6993-40cc-8b5e-8e748cf40993": {
+            "left": 0,
+            "top": 0,
+            "height": 96,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "6222bed2-6b16-480d-b61a-fa5762303578": {
+            "left": 30,
+            "top": 0,
+            "height": 102,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "9bb0b522-102e-493b-a07c-a34b705062c9": {
+            "left": 60,
+            "top": 0,
+            "height": 102,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "04516a31-eaf8-4f9d-8729-a6cb09849778": {
+            "left": 42,
+            "top": 0,
+            "height": 12,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "a84f91d7-15c3-4486-bdf5-38cb1eaf733a": {
+            "left": 12,
+            "top": 0,
+            "height": 12,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 0,
+            "height": 18,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2413a39e-f167-4c88-9e13-5781e51457a4": {
+            "left": 18,
+            "top": 12,
+            "height": 90,
+            "width": 78,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2bec6d0b-2abc-40cb-9fa1-3c8d2551cadf": {
+            "left": 0,
+            "top": 30,
+            "height": 24,
+            "width": 18,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "0c963519-e7f8-4226-abab-6d8f56065b36": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 18,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "sm": {
+          "0a79cdea-6993-40cc-8b5e-8e748cf40993": {
+            "left": 0,
+            "top": 0,
+            "height": 90,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "6222bed2-6b16-480d-b61a-fa5762303578": {
+            "left": 30,
+            "top": 0,
+            "height": 100,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "9bb0b522-102e-493b-a07c-a34b705062c9": {
+            "left": 60,
+            "top": 0,
+            "height": 100,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "04516a31-eaf8-4f9d-8729-a6cb09849778": {
+            "left": 40,
+            "top": 0,
+            "height": 10,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "a84f91d7-15c3-4486-bdf5-38cb1eaf733a": {
+            "left": 10,
+            "top": 0,
+            "height": 10,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 0,
+            "height": 20,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2413a39e-f167-4c88-9e13-5781e51457a4": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2bec6d0b-2abc-40cb-9fa1-3c8d2551cadf": {
+            "left": 0,
+            "top": 30,
+            "height": 20,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "0c963519-e7f8-4226-abab-6d8f56065b36": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "0a79cdea-6993-40cc-8b5e-8e748cf40993",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 96,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 90,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 0a79cdea-6993-40cc-8b5e-8e748cf40993."
+      },
+      {
+        "uuid": "6222bed2-6b16-480d-b61a-fa5762303578",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 30,
+            "top": 0,
+            "height": 102,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 30,
+            "top": 0,
+            "height": 100,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 6222bed2-6b16-480d-b61a-fa5762303578."
+      },
+      {
+        "uuid": "9bb0b522-102e-493b-a07c-a34b705062c9",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 60,
+            "top": 0,
+            "height": 102,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 60,
+            "top": 0,
+            "height": 100,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 9bb0b522-102e-493b-a07c-a34b705062c9."
+      },
+      {
+        "uuid": "04516a31-eaf8-4f9d-8729-a6cb09849778",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 17,
+            "top": 1,
+            "height": 14,
+            "width": 39,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 42,
+            "top": 0,
+            "height": 12,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 40,
+            "top": 0,
+            "height": 10,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 04516a31-eaf8-4f9d-8729-a6cb09849778."
+      },
+      {
+        "uuid": "a84f91d7-15c3-4486-bdf5-38cb1eaf733a",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 57,
+            "top": 1,
+            "height": 14,
+            "width": 41,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 12,
+            "top": 0,
+            "height": 12,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 10,
+            "top": 0,
+            "height": 10,
+            "width": 30,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: a84f91d7-15c3-4486-bdf5-38cb1eaf733a."
+      },
+      {
+        "uuid": "482e49ba-79e8-4945-876f-04505998f3f4",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 1,
+            "height": 26,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 18,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 20,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 482e49ba-79e8-4945-876f-04505998f3f4."
+      },
+      {
+        "uuid": "2413a39e-f167-4c88-9e13-5781e51457a4",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 19,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 18,
+            "top": 12,
+            "height": 90,
+            "width": 78,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 20,
+            "top": 10,
+            "height": 90,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 2413a39e-f167-4c88-9e13-5781e51457a4."
+      },
+      {
+        "uuid": "2bec6d0b-2abc-40cb-9fa1-3c8d2551cadf",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 1,
+            "top": 28,
+            "height": 24,
+            "width": 15,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 30,
+            "height": 24,
+            "width": 18,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 30,
+            "height": 20,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 2bec6d0b-2abc-40cb-9fa1-3c8d2551cadf."
+      },
+      {
+        "uuid": "0c963519-e7f8-4226-abab-6d8f56065b36",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 17,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 18,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 0c963519-e7f8-4226-abab-6d8f56065b36."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  },
+  {
+    "id": "1096920f-75ed-4d8b-9208-21687d80127b",
+    "name": "Profit Center Utilization Over Time",
+    "slug": "profit-centers-over-time",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/profit-centers-over-time",
+    "tags": [
+      "Boulder",
+      "PC"
+    ],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2025-12-30T22:49:54.770129+00:00",
+    "updated_at": "2026-02-10T20:38:47.248228+00:00",
+    "extractedAt": "2026-02-24T21:00:12.751Z",
+    "theme": {
+      "template": {
+        "header": false,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 200,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 2
+    },
+    "blockHidden": [
+      "e77faa11-ae48-48d4-a9f9-961d46b81767",
+      "ef9974b7-f7a7-437d-b604-2bd20998b9f3",
+      "a384d343-cddf-4d18-a28f-50e756066e47",
+      "509621ec-1791-48c8-996b-3b4f533a5ba4"
+    ],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [],
+    "javascripts": {
+      "onPageLoad": [
+        "b1ca7b7d-fdb8-4279-a95c-3b020b1b51ff"
+      ]
+    },
+    "pageStructure": {
+      "blockCount": 7,
+      "blockUUIDs": [
+        "de78cefa-8da1-4930-8265-13e3792bcac2",
+        "e77faa11-ae48-48d4-a9f9-961d46b81767",
+        "2e1e77d4-a94e-47ab-9a49-625091786efc",
+        "ef9974b7-f7a7-437d-b604-2bd20998b9f3",
+        "482e49ba-79e8-4945-876f-04505998f3f4",
+        "a384d343-cddf-4d18-a28f-50e756066e47",
+        "509621ec-1791-48c8-996b-3b4f533a5ba4"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "de78cefa-8da1-4930-8265-13e3792bcac2": {
+            "left": 16,
+            "top": 0,
+            "height": 50,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 1
+          },
+          "e77faa11-ae48-48d4-a9f9-961d46b81767": {
+            "left": 16,
+            "top": 22,
+            "height": 78,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2e1e77d4-a94e-47ab-9a49-625091786efc": {
+            "left": 0,
+            "top": 10,
+            "height": 70,
+            "width": 14,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "ef9974b7-f7a7-437d-b604-2bd20998b9f3": {
+            "left": 16,
+            "top": 22,
+            "height": 78,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 0,
+            "height": 20,
+            "width": 14,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "a384d343-cddf-4d18-a28f-50e756066e47": {
+            "left": 16,
+            "top": 0,
+            "height": 22,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "509621ec-1791-48c8-996b-3b4f533a5ba4": {
+            "left": 16,
+            "top": 0,
+            "height": 22,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "md": {
+          "de78cefa-8da1-4930-8265-13e3792bcac2": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "e77faa11-ae48-48d4-a9f9-961d46b81767": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2e1e77d4-a94e-47ab-9a49-625091786efc": {
+            "left": 0,
+            "top": 24,
+            "height": 24,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "ef9974b7-f7a7-437d-b604-2bd20998b9f3": {
+            "left": 12,
+            "top": 0,
+            "height": 102,
+            "width": 84,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 12,
+            "top": 0,
+            "height": 30,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "a384d343-cddf-4d18-a28f-50e756066e47": {
+            "left": 18,
+            "top": 0,
+            "height": 42,
+            "width": 72,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "509621ec-1791-48c8-996b-3b4f533a5ba4": {
+            "left": 18,
+            "top": 0,
+            "height": 42,
+            "width": 72,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "sm": {
+          "de78cefa-8da1-4930-8265-13e3792bcac2": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "e77faa11-ae48-48d4-a9f9-961d46b81767": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2e1e77d4-a94e-47ab-9a49-625091786efc": {
+            "left": 0,
+            "top": 30,
+            "height": 20,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "ef9974b7-f7a7-437d-b604-2bd20998b9f3": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 10,
+            "top": 0,
+            "height": 30,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "a384d343-cddf-4d18-a28f-50e756066e47": {
+            "left": 20,
+            "top": 0,
+            "height": 40,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "509621ec-1791-48c8-996b-3b4f533a5ba4": {
+            "left": 20,
+            "top": 0,
+            "height": 40,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "de78cefa-8da1-4930-8265-13e3792bcac2",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 50,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 1
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: de78cefa-8da1-4930-8265-13e3792bcac2."
+      },
+      {
+        "uuid": "e77faa11-ae48-48d4-a9f9-961d46b81767",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 22,
+            "height": 78,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: e77faa11-ae48-48d4-a9f9-961d46b81767."
+      },
+      {
+        "uuid": "2e1e77d4-a94e-47ab-9a49-625091786efc",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 10,
+            "height": 70,
+            "width": 14,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 24,
+            "height": 24,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 30,
+            "height": 20,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 2e1e77d4-a94e-47ab-9a49-625091786efc."
+      },
+      {
+        "uuid": "ef9974b7-f7a7-437d-b604-2bd20998b9f3",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 22,
+            "height": 78,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 12,
+            "top": 0,
+            "height": 102,
+            "width": 84,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: ef9974b7-f7a7-437d-b604-2bd20998b9f3."
+      },
+      {
+        "uuid": "482e49ba-79e8-4945-876f-04505998f3f4",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 0,
+            "height": 20,
+            "width": 14,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 12,
+            "top": 0,
+            "height": 30,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 10,
+            "top": 0,
+            "height": 30,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 482e49ba-79e8-4945-876f-04505998f3f4."
+      },
+      {
+        "uuid": "a384d343-cddf-4d18-a28f-50e756066e47",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 22,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 18,
+            "top": 0,
+            "height": 42,
+            "width": 72,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 20,
+            "top": 0,
+            "height": 40,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: a384d343-cddf-4d18-a28f-50e756066e47."
+      },
+      {
+        "uuid": "509621ec-1791-48c8-996b-3b4f533a5ba4",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 22,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 18,
+            "top": 0,
+            "height": 42,
+            "width": 72,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 20,
+            "top": 0,
+            "height": 40,
+            "width": 70,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 509621ec-1791-48c8-996b-3b4f533a5ba4."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  },
+  {
+    "id": "a73c6d34-0f17-423e-8cef-ceea2a6986ef",
+    "name": "Employee Utilization Over Time",
+    "slug": "employee-utilization-over-time",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/employee-utilization-over-time",
+    "tags": [
+      "Boulder",
+      "Employee"
+    ],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2026-01-21T17:29:24.775906+00:00",
+    "updated_at": "2026-02-09T19:30:41.016347+00:00",
+    "extractedAt": "2026-02-24T21:00:12.751Z",
+    "theme": {
+      "template": {
+        "header": true,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 100,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 2
+    },
+    "blockHidden": [
+      "5a19b259-1438-4c4a-a024-37a003dd818f",
+      "96cd4a6b-e6f8-4dd1-9977-58093c1d8755"
+    ],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [
+      "ol {",
+      "    display: flex;",
+      "    align-items: center;",
+      "    justify-content: center;",
+      "}",
+      "",
+      "li {",
+      "    flex:1;",
+      "    margin:0 5px;",
+      "}",
+      "li:first-of-type{margin-left: 0;}",
+      "li:last-of-type{margin-right: 0;}",
+      "",
+      ".button-bar {",
+      "    display: flex; /* Make the button bar a flex container */",
+      "    gap: 10px; /* Add space between buttons */",
+      "    justify-content: center; /* Optional: Center the buttons horizontally */",
+      "    padding: 5px; /* Optional: Add padding inside the button bar */",
+      "     margin-top: 10px;",
+      "}",
+      "",
+      ".button-bar .btn {",
+      "    border: 1px solid #E9E9E9;",
+      "    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);",
+      "    color: white;",
+      "    padding: 0px 0px; /* Add padding to make buttons larger */",
+      "    background-color: \"var(--color-primary)\"; /* Add a background color */",
+      "    cursor: pointer; /* Change cursor to pointer on hover */",
+      "    text-align: center; /* Center text inside buttons */",
+      "    flex: 1; /* Make buttons take equal space */",
+      "   ",
+      "}",
+      "",
+      ".button-bar .btn.clear {",
+      "}",
+      "",
+      ".button-bar .btn.apply {",
+      "}",
+      "",
+      "/* Single select */",
+      "",
+      "/* Single Select - Main toggle area */",
+      ".singleselect .toggle {",
+      "    display: flex;",
+      "    align-items: center;",
+      "    padding-right: 0px; /* Space for dropdown icon */",
+      "    min-height: 18px; /* Ensure consistent height */",
+      "    white-space: normal; /* Allow text wrapping */",
+      "    word-break: normal; /* Break long words if needed */",
+      "}",
+      "",
+      ".singleselect .toggle .selected-label {",
+      "    flex: 1;",
+      "    text-align: left;",
+      "    overflow: visible; /* Allow text to wrap instead of hiding */",
+      "    white-space: normal;",
+      "    word-break: normal;",
+      "    padding-right: 25px;",
+      "}",
+      "",
+      "/* Multi Select - Selected items container */",
+      ".multiselect .selected-list {",
+      "    display: flex;",
+      "    padding-right: px; /* Space for dropdown icon */",
+      "    min-height: 36px;",
+      "    align-items: center;",
+      "    white-space: normal;",
+      "}",
+      "",
+      "/* Multi Select - Individual selected items */",
+      ".multiselect .selected-item {",
+      "    white-space: normal;",
+      "    word-break: break-word;",
+      "    max-width: 100%; /* Prevent overflow */",
+      "}",
+      "",
+      "/* Ensure dropdown icon doesn't overlap content */",
+      ".singleselect .dropdown-icon,",
+      ".multiselect .dropdown-icon {",
+      "    position: absolute;",
+      "    right: 0px; /* Position icon with proper spacing */",
+      "    pointer-events: none; /* Don't interfere with text selection */",
+      "}",
+      "",
+      "/* If your toggle has relative positioning, add this */",
+      ".singleselect .toggle-wrapper,",
+      ".multiselect .toggle {",
+      "    position: relative;",
+      "    padding-right: 50px; /* Consistent spacing */",
+      "}",
+      "",
+      "/* Multi select */",
+      "",
+      ".multiselect .multiselect-container {",
+      "}",
+      "",
+      ".multiselect .opened {}",
+      "",
+      ".multiselect .toggle {",
+      "    ",
+      "}",
+      "",
+      ".multiselect .toggle-closed {}",
+      "",
+      ".multiselect .toggle-closed .label {}",
+      "",
+      ".multiselect .selected-list {}",
+      "",
+      ".multiselect .deselect {}",
+      "",
+      ".multiselect .deselect .minus {}",
+      "",
+      ".multiselect .count {}",
+      "",
+      ".multiselect .count span {",
+      "    background-color: transparent;",
+      "}",
+      "",
+      ".multiselect .dropdown-icon {}",
+      "",
+      ".multiselect .dropdown-icon.reverse {}",
+      "",
+      ".multiselect .dropdown-wrapper {}",
+      "",
+      ".multiselect .option {}",
+      "",
+      ".multiselect .option:hover .option-only-btn {}",
+      "",
+      ".multiselect .option-checkbox {}",
+      "",
+      ".multiselect .option-checkbox svg {}",
+      "",
+      ".multiselect .option-checkbox.selected {}",
+      "",
+      ".multiselect .option-checkbox.selected svg {}",
+      "",
+      ".multiselect .option-label {}",
+      "",
+      ".multiselect .option-only-btn {}",
+      "",
+      ".multiselect .search-wrapper {}",
+      "",
+      ".multiselect .search-icon {}",
+      "",
+      ".multiselect .search-field {}",
+      "",
+      ".multiselect .loader {}",
+      "",
+      ".multiselect .no-data__wrapper {}"
+    ],
+    "javascripts": {
+      "onPageLoad": [
+        "b1ca7b7d-fdb8-4279-a95c-3b020b1b51ff"
+      ]
+    },
+    "pageStructure": {
+      "blockCount": 6,
+      "blockUUIDs": [
+        "0e25e20c-baf1-4125-b262-abc9e8f822d0",
+        "5a19b259-1438-4c4a-a024-37a003dd818f",
+        "5256d4bd-6dbb-44d3-9ad4-1235c4cb8866",
+        "2e1e77d4-a94e-47ab-9a49-625091786efc",
+        "482e49ba-79e8-4945-876f-04505998f3f4",
+        "96cd4a6b-e6f8-4dd1-9977-58093c1d8755"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "0e25e20c-baf1-4125-b262-abc9e8f822d0": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "5a19b259-1438-4c4a-a024-37a003dd818f": {
+            "left": 18,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "5256d4bd-6dbb-44d3-9ad4-1235c4cb8866": {
+            "left": 18,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "2e1e77d4-a94e-47ab-9a49-625091786efc": {
+            "left": 0,
+            "top": 28,
+            "height": 32,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 0,
+            "height": 28,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "96cd4a6b-e6f8-4dd1-9977-58093c1d8755": {
+            "left": 18,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "md": {
+          "0e25e20c-baf1-4125-b262-abc9e8f822d0": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "5a19b259-1438-4c4a-a024-37a003dd818f": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "5256d4bd-6dbb-44d3-9ad4-1235c4cb8866": {
+            "left": 12,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "2e1e77d4-a94e-47ab-9a49-625091786efc": {
+            "left": 0,
+            "top": 24,
+            "height": 12,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 6,
+            "top": 24,
+            "height": 30,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "96cd4a6b-e6f8-4dd1-9977-58093c1d8755": {
+            "left": 12,
+            "top": 0,
+            "height": 102,
+            "width": 60,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "sm": {
+          "0e25e20c-baf1-4125-b262-abc9e8f822d0": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "5a19b259-1438-4c4a-a024-37a003dd818f": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "5256d4bd-6dbb-44d3-9ad4-1235c4cb8866": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "2e1e77d4-a94e-47ab-9a49-625091786efc": {
+            "left": 0,
+            "top": 30,
+            "height": 10,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 10,
+            "top": 30,
+            "height": 30,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "96cd4a6b-e6f8-4dd1-9977-58093c1d8755": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 60,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "0e25e20c-baf1-4125-b262-abc9e8f822d0",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 102,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 0e25e20c-baf1-4125-b262-abc9e8f822d0."
+      },
+      {
+        "uuid": "5a19b259-1438-4c4a-a024-37a003dd818f",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 18,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "md": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 5a19b259-1438-4c4a-a024-37a003dd818f."
+      },
+      {
+        "uuid": "5256d4bd-6dbb-44d3-9ad4-1235c4cb8866",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 18,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "md": {
+            "left": 12,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "sm": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 5256d4bd-6dbb-44d3-9ad4-1235c4cb8866."
+      },
+      {
+        "uuid": "2e1e77d4-a94e-47ab-9a49-625091786efc",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 28,
+            "height": 32,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 24,
+            "height": 12,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 30,
+            "height": 10,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 2e1e77d4-a94e-47ab-9a49-625091786efc."
+      },
+      {
+        "uuid": "482e49ba-79e8-4945-876f-04505998f3f4",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 0,
+            "height": 28,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 6,
+            "top": 24,
+            "height": 30,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 10,
+            "top": 30,
+            "height": 30,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 482e49ba-79e8-4945-876f-04505998f3f4."
+      },
+      {
+        "uuid": "96cd4a6b-e6f8-4dd1-9977-58093c1d8755",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 18,
+            "top": 0,
+            "height": 100,
+            "width": 58,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "md": {
+            "left": 12,
+            "top": 0,
+            "height": 102,
+            "width": 60,
+            "sizingUnit": "%",
+            "zIndex": -1
+          },
+          "sm": {
+            "left": 10,
+            "top": 0,
+            "height": 100,
+            "width": 60,
+            "sizingUnit": "%",
+            "zIndex": -1
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 96cd4a6b-e6f8-4dd1-9977-58093c1d8755."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  },
+  {
+    "id": "facd3bf4-cda4-437a-9211-a95e0b61fb54",
+    "name": "Employee Utilization",
+    "slug": "employee-utilization",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/employee-utilization",
+    "tags": [
+      "Boulder",
+      "Employee"
+    ],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2025-12-30T21:42:22.805221+00:00",
+    "updated_at": "2026-02-17T16:58:25.791585+00:00",
+    "extractedAt": "2026-02-24T21:00:12.751Z",
+    "theme": {
+      "template": {
+        "header": false,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 100,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 1
+    },
+    "blockHidden": [
+      "ebeec33f-0ba3-4180-b6a4-be546de9a62f",
+      "bca68142-6ff6-42dd-91f8-2c022425c401",
+      "909547ab-0635-4c2c-8873-f186f3f198be",
+      "d92fac64-d3c5-46a9-ba29-2f30f16b8168"
+    ],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [
+      ""
+    ],
+    "javascripts": {
+      "onPageLoad": []
+    },
+    "pageStructure": {
+      "blockCount": 6,
+      "blockUUIDs": [
+        "ebeec33f-0ba3-4180-b6a4-be546de9a62f",
+        "bca68142-6ff6-42dd-91f8-2c022425c401",
+        "909547ab-0635-4c2c-8873-f186f3f198be",
+        "482e49ba-79e8-4945-876f-04505998f3f4",
+        "d92fac64-d3c5-46a9-ba29-2f30f16b8168",
+        "2699debf-75ce-4582-beda-626182692839"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "ebeec33f-0ba3-4180-b6a4-be546de9a62f": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "bca68142-6ff6-42dd-91f8-2c022425c401": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "909547ab-0635-4c2c-8873-f186f3f198be": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 0,
+            "height": 30,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "d92fac64-d3c5-46a9-ba29-2f30f16b8168": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2699debf-75ce-4582-beda-626182692839": {
+            "left": 1,
+            "top": 24,
+            "height": 24,
+            "width": 13,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "md": {
+          "ebeec33f-0ba3-4180-b6a4-be546de9a62f": {
+            "left": -2,
+            "top": 4,
+            "height": 96,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "bca68142-6ff6-42dd-91f8-2c022425c401": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "909547ab-0635-4c2c-8873-f186f3f198be": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 6,
+            "top": 12,
+            "height": 30,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "d92fac64-d3c5-46a9-ba29-2f30f16b8168": {
+            "left": 18,
+            "top": 0,
+            "height": 102,
+            "width": 78,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2699debf-75ce-4582-beda-626182692839": {
+            "left": 0,
+            "top": 24,
+            "height": 24,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "sm": {
+          "ebeec33f-0ba3-4180-b6a4-be546de9a62f": {
+            "left": 0,
+            "top": 10,
+            "height": 90,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "bca68142-6ff6-42dd-91f8-2c022425c401": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "909547ab-0635-4c2c-8873-f186f3f198be": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "482e49ba-79e8-4945-876f-04505998f3f4": {
+            "left": 0,
+            "top": 10,
+            "height": 30,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "d92fac64-d3c5-46a9-ba29-2f30f16b8168": {
+            "left": 20,
+            "top": 0,
+            "height": 100,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "2699debf-75ce-4582-beda-626182692839": {
+            "left": 0,
+            "top": 20,
+            "height": 20,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "ebeec33f-0ba3-4180-b6a4-be546de9a62f",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": -2,
+            "top": 4,
+            "height": 96,
+            "width": 102,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 10,
+            "height": 90,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: ebeec33f-0ba3-4180-b6a4-be546de9a62f."
+      },
+      {
+        "uuid": "bca68142-6ff6-42dd-91f8-2c022425c401",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: bca68142-6ff6-42dd-91f8-2c022425c401."
+      },
+      {
+        "uuid": "909547ab-0635-4c2c-8873-f186f3f198be",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 6,
+            "top": 0,
+            "height": 102,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 90,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 909547ab-0635-4c2c-8873-f186f3f198be."
+      },
+      {
+        "uuid": "482e49ba-79e8-4945-876f-04505998f3f4",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 0,
+            "height": 30,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 6,
+            "top": 12,
+            "height": 30,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 10,
+            "height": 30,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 482e49ba-79e8-4945-876f-04505998f3f4."
+      },
+      {
+        "uuid": "d92fac64-d3c5-46a9-ba29-2f30f16b8168",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 16,
+            "top": 0,
+            "height": 100,
+            "width": 76,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 18,
+            "top": 0,
+            "height": 102,
+            "width": 78,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 20,
+            "top": 0,
+            "height": 100,
+            "width": 80,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: d92fac64-d3c5-46a9-ba29-2f30f16b8168."
+      },
+      {
+        "uuid": "2699debf-75ce-4582-beda-626182692839",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 1,
+            "top": 24,
+            "height": 24,
+            "width": 13,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 24,
+            "height": 24,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 20,
+            "height": 20,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 2699debf-75ce-4582-beda-626182692839."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  },
+  {
+    "id": "c203c58f-2522-4f9a-a922-4317c0b7a57c",
+    "name": "Employee Records",
+    "slug": "employee-records",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/employee-records",
+    "tags": [],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2026-01-28T02:02:18.098057+00:00",
+    "updated_at": "2026-02-09T22:43:10.076179+00:00",
+    "extractedAt": "2026-02-24T21:00:12.752Z",
+    "theme": {
+      "template": {
+        "header": true,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 100,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 2
+    },
+    "blockHidden": [],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [],
+    "javascripts": {
+      "onPageLoad": []
+    },
+    "pageStructure": {
+      "blockCount": 3,
+      "blockUUIDs": [
+        "83c44fe9-fd6b-424d-9176-2da20f8e9cc1",
+        "9cfdda28-3e48-48cd-83ab-12cae2e56f9e",
+        "b0d8265a-94bc-4b9d-ada3-22b212a2e53d"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "83c44fe9-fd6b-424d-9176-2da20f8e9cc1": {
+            "left": 20,
+            "top": 6,
+            "height": 70,
+            "width": 78,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "9cfdda28-3e48-48cd-83ab-12cae2e56f9e": {
+            "left": 2,
+            "top": 2,
+            "height": 56,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "b0d8265a-94bc-4b9d-ada3-22b212a2e53d": {
+            "left": 8,
+            "top": 28,
+            "height": 6,
+            "width": 6,
+            "sizingUnit": "%",
+            "zIndex": 1
+          }
+        },
+        "md": {
+          "83c44fe9-fd6b-424d-9176-2da20f8e9cc1": {
+            "left": 0,
+            "top": 12,
+            "height": 54,
+            "width": 96,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "9cfdda28-3e48-48cd-83ab-12cae2e56f9e": {
+            "left": 48,
+            "top": 6,
+            "height": 6,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "b0d8265a-94bc-4b9d-ada3-22b212a2e53d": {
+            "left": 6,
+            "top": 30,
+            "height": 6,
+            "width": 6,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "sm": {
+          "83c44fe9-fd6b-424d-9176-2da20f8e9cc1": {
+            "left": 0,
+            "top": 10,
+            "height": 50,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "9cfdda28-3e48-48cd-83ab-12cae2e56f9e": {
+            "left": 50,
+            "top": 10,
+            "height": 10,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "b0d8265a-94bc-4b9d-ada3-22b212a2e53d": {
+            "left": 10,
+            "top": 30,
+            "height": 10,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "83c44fe9-fd6b-424d-9176-2da20f8e9cc1",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 20,
+            "top": 6,
+            "height": 70,
+            "width": 78,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 12,
+            "height": 54,
+            "width": 96,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 10,
+            "height": 50,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 83c44fe9-fd6b-424d-9176-2da20f8e9cc1."
+      },
+      {
+        "uuid": "9cfdda28-3e48-48cd-83ab-12cae2e56f9e",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 2,
+            "top": 2,
+            "height": 56,
+            "width": 16,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 48,
+            "top": 6,
+            "height": 6,
+            "width": 12,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 50,
+            "top": 10,
+            "height": 10,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: 9cfdda28-3e48-48cd-83ab-12cae2e56f9e."
+      },
+      {
+        "uuid": "b0d8265a-94bc-4b9d-ada3-22b212a2e53d",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 8,
+            "top": 28,
+            "height": 6,
+            "width": 6,
+            "sizingUnit": "%",
+            "zIndex": 1
+          },
+          "md": {
+            "left": 6,
+            "top": 30,
+            "height": 6,
+            "width": 6,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 10,
+            "top": 30,
+            "height": 10,
+            "width": 10,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: b0d8265a-94bc-4b9d-ada3-22b212a2e53d."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  },
+  {
+    "id": "3c5569d5-40a5-4c81-a315-5705fed41fb4",
+    "name": "Project Health",
+    "slug": "project-health",
+    "pageUrl": "https://boulder-associates-portal.zuarbase.net/p/project-health",
+    "tags": [],
+    "access": {
+      "groups": []
+    },
+    "order": 1000,
+    "icon": null,
+    "created_at": "2026-01-06T15:47:02.557450+00:00",
+    "updated_at": "2026-01-06T22:22:33.421909+00:00",
+    "extractedAt": "2026-02-24T21:00:12.752Z",
+    "theme": {
+      "template": {
+        "header": false,
+        "leftSidebar": true,
+        "rightSidebar": false,
+        "footer": false
+      },
+      "customProperties": {}
+    },
+    "gridLayout": {
+      "width": 100,
+      "height": 100,
+      "align": "center",
+      "sizingUnit": "%",
+      "cellSize": 2
+    },
+    "blockHidden": [],
+    "sidebar": {
+      "collapsable": false,
+      "openIcon": "fa-chevron-left",
+      "closeIcon": "fa-chevron-right",
+      "iconPosition": "middle"
+    },
+    "css": [
+      "",
+      "    .dashboard {",
+      "      max-width: 100%;",
+      "      margin: 0 auto;",
+      "      display: grid;",
+      "      gap: 6px;",
+      "    }",
+      "",
+      "    /* ROW 1: FILTERS */",
+      "    .row-filters {",
+      "      background: white;",
+      "      border-radius: 6px;",
+      "      padding: 8px;",
+      "      box-shadow: 0 1px 3px rgba(0,0,0,0.08);",
+      "    }",
+      "",
+      "    .filters {",
+      "      display: flex;",
+      "      flex-wrap: wrap;",
+      "      gap: 8px;",
+      "      align-items: flex-end;",
+      "    }",
+      "",
+      "    .filter-group {",
+      "      display: flex;",
+      "      flex-direction: column;",
+      "      gap: 2px;",
+      "      min-width: 160px;",
+      "    }",
+      "",
+      "    .filter-label {",
+      "      font-size: 10px;",
+      "      color: #666;",
+      "      text-transform: uppercase;",
+      "      letter-spacing: 0.5px;",
+      "      font-weight: 600;",
+      "    }",
+      "",
+      "    select {",
+      "      padding: 5px 10px;",
+      "      border: 1px solid #ddd;",
+      "      border-radius: 4px;",
+      "      background: white;",
+      "      font-size: 13px;",
+      "      color: #333;",
+      "      cursor: pointer;",
+      "      transition: all 0.2s ease;",
+      "    }",
+      "",
+      "    select:hover { border-color: #2196F3; }",
+      "    select:focus {",
+      "      outline: none;",
+      "      border-color: #2196F3;",
+      "      box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);",
+      "    }",
+      "",
+      "    .filter-toggle {",
+      "      display: flex;",
+      "      align-items: center;",
+      "      gap: 6px;",
+      "      padding: 5px 10px;",
+      "      background: white;",
+      "      border: 1px solid #ddd;",
+      "      border-radius: 4px;",
+      "      cursor: pointer;",
+      "      transition: all 0.2s ease;",
+      "      user-select: none;",
+      "    }",
+      "",
+      "    .filter-toggle:hover {",
+      "      border-color: #2196F3;",
+      "      background: #f8f9fa;",
+      "    }",
+      "",
+      "    .filter-toggle input[type=\"checkbox\"] {",
+      "      width: 14px;",
+      "      height: 14px;",
+      "      cursor: pointer;",
+      "      margin: 0;",
+      "    }",
+      "",
+      "    .filter-toggle-label {",
+      "      font-size: 12px;",
+      "      color: #333;",
+      "      font-weight: 500;",
+      "      cursor: pointer;",
+      "      white-space: nowrap;",
+      "    }",
+      "",
+      "    .filter-count-badge {",
+      "      display: inline-block;",
+      "      padding: 1px 5px;",
+      "      background: #2196F3;",
+      "      color: white;",
+      "      border-radius: 8px;",
+      "      font-size: 9px;",
+      "      font-weight: 600;",
+      "      margin-left: 3px;",
+      "    }",
+      "",
+      "    .btn {",
+      "      border-radius: 4px;",
+      "      padding: 5px 12px;",
+      "      border: 1px solid #ddd;",
+      "      background: white;",
+      "      color: #333;",
+      "      cursor: pointer;",
+      "      font-size: 12px;",
+      "      font-weight: 500;",
+      "      transition: all 0.2s ease;",
+      "      white-space: nowrap;",
+      "    }",
+      "",
+      "    .btn:hover {",
+      "      background: #f8f9fa;",
+      "      border-color: #2196F3;",
+      "    }",
+      "",
+      "    .btn:active { transform: translateY(1px); }",
+      "",
+      "    /* ROW 2: KPI STRIP (always 1 row, auto-scale) */",
+      "    .row-kpis {",
+      "      background: transparent;",
+      "    }",
+      "",
+      "    .kpiRow {",
+      "      display: grid;",
+      "      grid-auto-flow: column;",
+      "      grid-auto-columns: minmax(120px, 1fr);",
+      "      gap: 6px;",
+      "      width: 100%;",
+      "      overflow: hidden;",
+      "    }",
+      "",
+      "    .kpi-card {",
+      "      background: white;",
+      "      border-radius: 4px;",
+      "      padding: 6px 8px;",
+      "      box-shadow: 0 1px 3px rgba(0,0,0,0.08);",
+      "      transition: transform 0.2s ease, box-shadow 0.2s ease;",
+      "      min-height: 50px;",
+      "      display: flex;",
+      "      flex-direction: column;",
+      "      justify-content: center;",
+      "    }",
+      "",
+      "    .kpi-card:hover {",
+      "      transform: translateY(-1px);",
+      "      box-shadow: 0 2px 8px rgba(0,0,0,0.12);",
+      "    }",
+      "",
+      "    .kpi-label {",
+      "      font-size: 9px;",
+      "      color: #666;",
+      "      text-transform: uppercase;",
+      "      letter-spacing: 0.3px;",
+      "      margin-bottom: 2px;",
+      "      font-weight: 600;",
+      "      white-space: nowrap;",
+      "      overflow: hidden;",
+      "      text-overflow: ellipsis;",
+      "    }",
+      "",
+      "    .kpi-value {",
+      "      font-size: 16px;",
+      "      font-weight: 700;",
+      "      color: #333;",
+      "      line-height: 1.1;",
+      "    }",
+      "",
+      "    .kpi-delta {",
+      "      font-size: 9px;",
+      "      margin-top: 2px;",
+      "      font-weight: 600;",
+      "    }",
+      "",
+      "    .kpi-delta.positive { color: #4CAF50; }",
+      "    .kpi-delta.negative { color: #F44336; }",
+      "",
+      "    /* ROW 3: PROJECT LIST/METADATA */",
+      "    .row-meta {",
+      "      background: white;",
+      "      border-radius: 6px;",
+      "      padding: 6px 8px;",
+      "      box-shadow: 0 1px 3px rgba(0,0,0,0.08);",
+      "    }",
+      "",
+      "    .row-meta.is-hidden { display: none; }",
+      "",
+      "    .metadata-title {",
+      "      font-size: 13px;",
+      "      font-weight: 600;",
+      "      margin-bottom: 6px;",
+      "      color: #333;",
+      "      border-bottom: 2px solid #2196F3;",
+      "      padding-bottom: 4px;",
+      "    }",
+      "",
+      "    /* Project List Table */",
+      "    .project-list-container {",
+      "      display: none;",
+      "    }",
+      "",
+      "    .project-list-container.visible {",
+      "      display: block;",
+      "    }",
+      "",
+      "    .project-list-table-wrapper {",
+      "      max-height: 300px;",
+      "      overflow-y: auto;",
+      "      overflow-x: auto;",
+      "    }",
+      "",
+      "    .project-list-table {",
+      "      width: 100%;",
+      "      border-collapse: collapse;",
+      "      font-size: 12px;",
+      "    }",
+      "",
+      "    .project-list-table thead {",
+      "      background: #f8f9fa;",
+      "      position: sticky;",
+      "      top: 0;",
+      "      z-index: 10;",
+      "    }",
+      "",
+      "    .project-list-table th {",
+      "      text-align: left;",
+      "      padding: 6px 8px;",
+      "      font-weight: 600;",
+      "      color: #666;",
+      "      text-transform: uppercase;",
+      "      font-size: 10px;",
+      "      letter-spacing: 0.5px;",
+      "      border-bottom: 2px solid #2196F3;",
+      "      cursor: pointer;",
+      "      user-select: none;",
+      "      white-space: nowrap;",
+      "    }",
+      "",
+      "    .project-list-table th:hover {",
+      "      background: #e9ecef;",
+      "    }",
+      "",
+      "    .project-list-table th.sortable::after {",
+      "      content: ' ↕';",
+      "      opacity: 0.3;",
+      "      font-size: 10px;",
+      "    }",
+      "",
+      "    .project-list-table th.sorted-asc::after {",
+      "      content: ' ↑';",
+      "      opacity: 1;",
+      "      color: #2196F3;",
+      "    }",
+      "",
+      "    .project-list-table th.sorted-desc::after {",
+      "      content: ' ↓';",
+      "      opacity: 1;",
+      "      color: #2196F3;",
+      "    }",
+      "",
+      "    .project-list-table tbody tr {",
+      "      border-bottom: 1px solid #e9ecef;",
+      "      transition: background 0.15s ease;",
+      "      cursor: pointer;",
+      "    }",
+      "",
+      "    .project-list-table tbody tr:hover {",
+      "      background: #f8f9fa;",
+      "    }",
+      "",
+      "    .project-list-table tbody tr:active {",
+      "      background: #e9ecef;",
+      "    }",
+      "",
+      "    .project-list-table td {",
+      "      padding: 6px 8px;",
+      "      color: #333;",
+      "      white-space: nowrap;",
+      "      overflow: hidden;",
+      "      text-overflow: ellipsis;",
+      "      max-width: 300px;",
+      "    }",
+      "",
+      "    .project-list-table td.project-name {",
+      "      font-weight: 500;",
+      "      color: #2196F3;",
+      "    }",
+      "",
+      "    .project-list-table-wrapper::-webkit-scrollbar {",
+      "      width: 8px;",
+      "      height: 8px;",
+      "    }",
+      "",
+      "    .project-list-table-wrapper::-webkit-scrollbar-track {",
+      "      background: #f1f1f1;",
+      "      border-radius: 4px;",
+      "    }",
+      "",
+      "    .project-list-table-wrapper::-webkit-scrollbar-thumb {",
+      "      background: #ccc;",
+      "      border-radius: 4px;",
+      "    }",
+      "",
+      "    .project-list-table-wrapper::-webkit-scrollbar-thumb:hover {",
+      "      background: #999;",
+      "    }",
+      "",
+      "    .project-list-empty {",
+      "      text-align: center;",
+      "      padding: 30px 20px;",
+      "      color: #999;",
+      "      font-size: 13px;",
+      "    }",
+      "",
+      "    /* Single Project Metadata */",
+      "    .project-meta-container {",
+      "      display: none;",
+      "    }",
+      "",
+      "    .project-meta-container.visible {",
+      "      display: block;",
+      "    }",
+      "",
+      "    .metadata-grid {",
+      "      display: grid;",
+      "      grid-template-columns: repeat(4, minmax(0, 1fr));",
+      "      gap: 6px 10px;",
+      "    }",
+      "",
+      "    .metadata-item {",
+      "      white-space: nowrap;",
+      "      overflow: hidden;",
+      "      text-overflow: ellipsis;",
+      "    }",
+      "",
+      "    .metadata-item-label {",
+      "      font-size: 9px;",
+      "      color: #666;",
+      "      text-transform: uppercase;",
+      "      letter-spacing: 0.5px;",
+      "      font-weight: 600;",
+      "      margin-bottom: 1px;",
+      "    }",
+      "",
+      "    .metadata-item-value {",
+      "      font-size: 12px;",
+      "      color: #333;",
+      "      font-weight: 500;",
+      "    }",
+      "",
+      "    /* ROW 4: CHARTS (2 side-by-side) */",
+      "    .row-charts {",
+      "      background: transparent;",
+      "    }",
+      "",
+      "    .chartsGrid {",
+      "      display: grid;",
+      "      grid-template-columns: 1fr 1fr;",
+      "      gap: 6px;",
+      "    }",
+      "",
+      "    .chart-container {",
+      "      background: white;",
+      "      border-radius: 6px;",
+      "      padding: 10px;",
+      "      box-shadow: 0 1px 3px rgba(0,0,0,0.08);",
+      "    }",
+      "",
+      "    .chart-title {",
+      "      font-size: 13px;",
+      "      font-weight: 600;",
+      "      margin-bottom: 8px;",
+      "      color: #333;",
+      "    }",
+      "",
+      "    .chart {",
+      "      width: 100%;",
+      "      height: 280px;",
+      "    }",
+      "",
+      "    /* RESPONSIVE */",
+      "    @media (max-width: 1200px) {",
+      "      .chartsGrid { grid-template-columns: 1fr; }",
+      "    }",
+      "",
+      "    @media (max-width: 900px) {",
+      "      .metadata-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }",
+      "    }",
+      "",
+      "    @media (max-width: 768px) {",
+      "      .filters { flex-direction: column; }",
+      "      .filter-group { width: 100%; min-width: 0; }",
+      "      select { width: 100%; }",
+      "      .btn { width: 100%; }",
+      "      .kpiRow {",
+      "        overflow-x: auto;",
+      "        -webkit-overflow-scrolling: touch;",
+      "      }",
+      "      .metadata-grid { grid-template-columns: 1fr; }",
+      "      .chart { height: 240px; }",
+      "    }",
+      "",
+      "    /* EMPTY STATE */",
+      "    .empty-state {",
+      "      text-align: center;",
+      "      padding: 40px 20px;",
+      "      color: #999;",
+      "    }",
+      "",
+      "    .empty-state-icon {",
+      "      font-size: 36px;",
+      "      margin-bottom: 10px;",
+      "    }",
+      "",
+      "    .empty-state-text {",
+      "      font-size: 15px;",
+      "      font-weight: 600;",
+      "    }"
+    ],
+    "javascripts": {
+      "onPageLoad": []
+    },
+    "pageStructure": {
+      "blockCount": 1,
+      "blockUUIDs": [
+        "b556a7f1-1e4f-4f5e-a676-1b8e4aae4b32"
+      ],
+      "primaryBreakpoint": "lg",
+      "blockLayouts": {
+        "lg": {
+          "b556a7f1-1e4f-4f5e-a676-1b8e4aae4b32": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "md": {
+          "b556a7f1-1e4f-4f5e-a676-1b8e4aae4b32": {
+            "left": 0,
+            "top": 0,
+            "height": 30,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "sm": {
+          "b556a7f1-1e4f-4f5e-a676-1b8e4aae4b32": {
+            "left": 0,
+            "top": 0,
+            "height": 30,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        }
+      }
+    },
+    "blocks": [
+      {
+        "uuid": "b556a7f1-1e4f-4f5e-a676-1b8e4aae4b32",
+        "blockType": null,
+        "blockTitle": null,
+        "datasourceId": null,
+        "scopeKeys": null,
+        "blockConfig": {},
+        "data": null,
+        "layouts": {
+          "lg": {
+            "left": 0,
+            "top": 0,
+            "height": 100,
+            "width": 100,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "md": {
+            "left": 0,
+            "top": 0,
+            "height": 30,
+            "width": 24,
+            "sizingUnit": "%",
+            "zIndex": 0
+          },
+          "sm": {
+            "left": 0,
+            "top": 0,
+            "height": 30,
+            "width": 20,
+            "sizingUnit": "%",
+            "zIndex": 0
+          }
+        },
+        "error": "getScope: No HTML block found for ID: b556a7f1-1e4f-4f5e-a676-1b8e4aae4b32."
+      }
+    ],
+    "blockTypes": [],
+    "datasourceIds": [],
+    "datasources": [],
+    "hasLiveScope": false
+  }
+]

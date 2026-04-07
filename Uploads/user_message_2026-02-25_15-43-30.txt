@@ -1,0 +1,153 @@
+1.  I do not liuke the current color palette, please revert back tothe previous colors
+2. remove the fox picture 
+3. 200+ portal pages built / 24+ unique data sources integrated / 16+ client portals 
+4. Move projects above Full-Stack Analytics Expertise
+5. you have some of the stats mixed up between company, see attached resume summary and make sure all the claims are congruous with right company
+6. Please review all copy and make sure to humanize it, so its less AI written/detectable 
+7. I want you to add in history for my previous roles prior to Thomas inventory and make sure the dates are accurate for the timeline etc
+
+Zuar logo
+Analytics Implementation Manager
+Analytics Implementation Manager
+Zuar · Full-timeZuar · Full-time
+Oct 2022 - Present · 3 yrs 5 mosOct 2022 to Present · 3 yrs 5 mos
+RemoteRemote
+Data-driven Analytics Implementation Manager with expertise in transforming client data into strategic assets via Zuar Portal (embedded analytics) and Runner (ETL automation). Blending strategic consulting, technical architecture, hands-on implementation, and project management to lead the full client lifecycle, ensuring solution ROI and user adoption.
+
+Key Responsibilities:
+Built greenfield analytics for multiple clients: defined data strategy, modeled source data, automated ELT/ETL, and deployed BI (Tableau, ThoughtSpot, Power BI) embedded in Zuar Portals.
+Architected and delivered scalable, user-centered embedded portals; owned config, customizations (JavaScript, HTML, CSS, SQL), and secure access/SSO for global and Fortune 500 audiences.
+Implemented Zuar Runner for ingestion, transformation, scheduling, and monitoring; improved reliability, reduced latency, and strengthened governance across data flows.
+Translated business goals into roadmaps, KPIs, and semantic/data models; partnered with stakeholders to prioritize high-value use cases and drive decision impact.
+Led adoption: centralized analytics hubs, role-based content, usage instrumentation, telemetry-driven iteration, and feedback loops; delivered enablement and training to scale data literacy and self‑service.
+
+Qualifications & Skills:
+• BI: Tableau, ThoughtSpot, Power BI (deployment, modeling, governance, embedding)
+• Data: SQL, dimensional modeling, semantic layer design, KPI frameworks
+• ETL/ELT: Zuar Runner, orchestration, monitoring, data quality
+• Web & Embedding: JavaScript, HTML, CSS; secure embedding patterns
+• Practices: Solution architecture, technical PM, stakeholder consulting, enablement, change management
+
+Notable Achievements:
+•Launched 12+ Zuar Portals for global users (incl. Fortune 500).
+•Delivered 2,000+ consulting hours driving client success (incl. acquisitions).
+•Created centralized data hubs improving resource access.
+•Established adoption tracking frameworks optimizing engagement.Data-driven Analytics Implementation Manager with expertise in transforming client data into strategic assets via Zuar Portal (embedded analytics) and Runner (ETL automation). Blending strategic consulting, technical architecture, hands-on implementation, and project management to lead the full client lifecycle, ensuring solution ROI and user adoption. Key Responsibilities: Built greenfield analytics for multiple clients: defined data strategy, modeled source data, automated ELT/ETL, and deployed BI (Tableau, ThoughtSpot, Power BI) embedded in Zuar Portals. Architected and delivered scalable, user-centered embedded portals; owned config, customizations (JavaScript, HTML, CSS, SQL), and secure access/SSO for global and Fortune 500 audiences. Implemented Zuar Runner for ingestion, transformation, scheduling, and monitoring; improved reliability, reduced latency, and strengthened governance across data flows. Translated business goals into roadmaps, KPIs, and semantic/data models; partnered with stakeholders to prioritize high-value use cases and drive decision impact. Led adoption: centralized analytics hubs, role-based content, usage instrumentation, telemetry-driven iteration, and feedback loops; delivered enablement and training to scale data literacy and self‑service. Qualifications & Skills: • BI: Tableau, ThoughtSpot, Power BI (deployment, modeling, governance, embedding) • Data: SQL, dimensional modeling, semantic layer design, KPI frameworks • ETL/ELT: Zuar Runner, orchestration, monitoring, data quality • Web & Embedding: JavaScript, HTML, CSS; secure embedding patterns • Practices: Solution architecture, technical PM, stakeholder consulting, enablement, change management Notable Achievements: •Launched 12+ Zuar Portals for global users (incl. Fortune 500). •Delivered 2,000+ consulting hours driving client success (incl. acquisitions). •Created centralized data hubs improving resource access. •Established adoption tracking frameworks optimizing engagement.
+Tableau, Microsoft Power BI and +12 skills
+Propel Bikes logo
+Propel Bikes
+Propel Bikes
+Full-time · 2 yrs 8 mosFull-time · 2 yrs 8 mos
+HybridHybrid
+Chief Operating Officer
+Chief Operating Officer
+Aug 2021 - Oct 2022 · 1 yr 3 mosAug 2021 to Oct 2022 · 1 yr 3 mos
+Brooklyn, New York, United StatesBrooklyn, New York, United States
+Chief Operating Officer at Propel Electric Bikes | Business Transformation & Analytics Leader
+As COO at Propel Electric Bikes, I orchestrated a comprehensive business transformation powered by data analytics and custom software solutions, scaling operations from $2M to $8M annual revenue while expanding from 2 locations with 8 employees to 3 locations with 35 team members.
+
+Key Responsibilities:
+• Business Intelligence Strategy: Architected enterprise-wide analytics infrastructure using Looker and BigQuery, creating dashboards and KPI tracking systems that drove data-informed decision making across all departments
+• Software Development Leadership: Served as product manager for mission-critical WordPress plugins utilizing JS/PHP/Python, designing solutions that synchronized inventory management systems across multiple locations
+• Global Operations Expansion: Established and scaled an overseas customer success team, implementing data-driven support protocols that improved post-sales satisfaction while optimizing operational costs
+• Cross-Functional Optimization: Leveraged analytics to identify efficiency opportunities, implementing process improvements that supported 4x revenue growth while maintaining quality standards
+
+Notable Achievements:
+• Developed custom inventory synchronization system that reduced stockouts by 35% while decreasing excess inventory costs by 22%
+• Created performance analytics framework that improved sales team effectiveness, increasing average transaction value by 18%
+• Implemented predictive maintenance analytics that reduced service turnaround times by 40% and improved customer satisfaction scores
+• Designed scalable operational playbooks powered by real-time analytics that enabled rapid expansion to new locations while maintaining consistent performance
+
+My approach combined technical expertise in analytics and software development with strategic business leadership to drive sustainable growth through data-powered optimization.Chief Operating Officer at Propel Electric Bikes | Business Transformation & Analytics Leader As COO at Propel Electric Bikes, I orchestrated a comprehensive business transformation powered by data analytics and custom software solutions, scaling operations from $2M to $8M annual revenue while expanding from 2 locations with 8 employees to 3 locations with 35 team members. Key Responsibilities: • Business Intelligence Strategy: Architected enterprise-wide analytics infrastructure using Looker and BigQuery, creating dashboards and KPI tracking systems that drove data-informed decision making across all departments • Software Development Leadership: Served as product manager for mission-critical WordPress plugins utilizing JS/PHP/Python, designing solutions that synchronized inventory management systems across multiple locations • Global Operations Expansion: Established and scaled an overseas customer success team, implementing data-driven support protocols that improved post-sales satisfaction while optimizing operational costs • Cross-Functional Optimization: Leveraged analytics to identify efficiency opportunities, implementing process improvements that supported 4x revenue growth while maintaining quality standards Notable Achievements: • Developed custom inventory synchronization system that reduced stockouts by 35% while decreasing excess inventory costs by 22% • Created performance analytics framework that improved sales team effectiveness, increasing average transaction value by 18% • Implemented predictive maintenance analytics that reduced service turnaround times by 40% and improved customer satisfaction scores • Designed scalable operational playbooks powered by real-time analytics that enabled rapid expansion to new locations while maintaining consistent performance My approach combined technical expertise in analytics and software development with strategic business leadership to drive sustainable growth through data-powered optimization.
+Business Intelligence (BI), Artificial Intelligence (AI) and +10 skills
+Operations Manager
+Operations Manager
+Mar 2020 - Aug 2021 · 1 yr 6 mosMar 2020 to Aug 2021 · 1 yr 6 mos
+Long Beach, California, United StatesLong Beach, California, United States
+In my early role as Operations Manager at Propel Electric Bikes, I established the operational backbone that paved the way for the company’s later digital transformation and expansive growth. Tasked with overseeing day-to-day operations at one of our key locations, I was responsible for optimizing workflows, implementing data-driven process improvements, and refining the logistical infrastructure.
+
+Key contributions included designing and deploying custom performance dashboards, standardizing inventory management protocols, and working closely with cross-functional teams to enhance order fulfillment and warehouse efficiency. These initiatives improved processing times significantly and elevated overall operational throughput, ensuring smoother resource allocation and enhanced customer satisfaction.
+
+My hands-on approach to streamlining operations not only reduced waste and minimized errors but also built a scalable, agile operating environment. This critical groundwork set the stage for more comprehensive, data-powered business transformation—a journey that I later led as Chief Operating Officer, where I expanded our operational footprint and drove the integration of advanced analytics and custom software solutions company-wide.In my early role as Operations Manager at Propel Electric Bikes, I established the operational backbone that paved the way for the company’s later digital transformation and expansive growth. Tasked with overseeing day-to-day operations at one of our key locations, I was responsible for optimizing workflows, implementing data-driven process improvements, and refining the logistical infrastructure. Key contributions included designing and deploying custom performance dashboards, standardizing inventory management protocols, and working closely with cross-functional teams to enhance order fulfillment and warehouse efficiency. These initiatives improved processing times significantly and elevated overall operational throughput, ensuring smoother resource allocation and enhanced customer satisfaction. My hands-on approach to streamlining operations not only reduced waste and minimized errors but also built a scalable, agile operating environment. This critical groundwork set the stage for more comprehensive, data-powered business transformation—a journey that I later led as Chief Operating Officer, where I expanded our operational footprint and drove the integration of advanced analytics and custom software solutions company-wide.
+Thomas Inventory Services logo
+Thomas Inventory Services
+Thomas Inventory Services
+Full-time · 7 yrs 7 mosFull-time · 7 yrs 7 mos
+On-siteOn-site
+Chief Operations Officer
+Chief Operations Officer
+Jan 2016 - Mar 2020 · 4 yrs 3 mosJan 2016 to Mar 2020 · 4 yrs 3 mos
+Somerville, New Jersey, United StatesSomerville, New Jersey, United States
+Chief Operations Officer (COO) at Thomas Inventory Services LLC | Strategic Growth & Digital Transformation
+As COO at Thomas Inventory Services, I spearheaded the company's strategic expansion and digital transformation, scaling operations from a regional 3PL provider to an industry leader processing over 5 million units annually for marketplace sellers across multiple facilities.
+
+Key Responsibilities:
+• Executive Leadership: Directed all operational functions including warehouse operations, technology, client services, and supply chain management across three facilities
+• Strategic Planning: Developed and executed comprehensive growth strategy that expanded service offerings, geographic footprint, and technological capabilities
+• Digital Transformation: Led implementation of integrated technology ecosystem connecting inventory management, client portals, and predictive analytics
+• Financial Optimization: Restructured operational cost models and pricing strategies that improved margins while enabling competitive service offerings
+
+Notable Achievements:
+• Scaled company from $3M to $12M annual revenue while expanding from single facility to three strategic locations serving nationwide clients
+• Architected proprietary inventory intelligence platform that provided clients with real-time analytics, reducing processing times by 40% and improving inventory visibility
+• Established international client success team that provided 24/7 support, increasing enterprise client retention to 96% and expanding service adoption
+• Developed strategic partnerships with freight providers and marketplaces that created integrated service offerings, opening new revenue streams
+
+My executive leadership combined operational expertise with strategic vision and technological innovation, transforming the company from a regional service provider to an industry leader in marketplace logistics while maintaining our commitment to personalized client relationships.Chief Operations Officer (COO) at Thomas Inventory Services LLC | Strategic Growth & Digital Transformation As COO at Thomas Inventory Services, I spearheaded the company's strategic expansion and digital transformation, scaling operations from a regional 3PL provider to an industry leader processing over 5 million units annually for marketplace sellers across multiple facilities. Key Responsibilities: • Executive Leadership: Directed all operational functions including warehouse operations, technology, client services, and supply chain management across three facilities • Strategic Planning: Developed and executed comprehensive growth strategy that expanded service offerings, geographic footprint, and technological capabilities • Digital Transformation: Led implementation of integrated technology ecosystem connecting inventory management, client portals, and predictive analytics • Financial Optimization: Restructured operational cost models and pricing strategies that improved margins while enabling competitive service offerings Notable Achievements: • Scaled company from $3M to $12M annual revenue while expanding from single facility to three strategic locations serving nationwide clients • Architected proprietary inventory intelligence platform that provided clients with real-time analytics, reducing processing times by 40% and improving inventory visibility • Established international client success team that provided 24/7 support, increasing enterprise client retention to 96% and expanding service adoption • Developed strategic partnerships with freight providers and marketplaces that created integrated service offerings, opening new revenue streams My executive leadership combined operational expertise with strategic vision and technological innovation, transforming the company from a regional service provider to an industry leader in marketplace logistics while maintaining our commitment to personalized client relationships.
+Director of Operations
+Director of Operations
+Mar 2013 - Jan 2016 · 2 yrs 11 mosMar 2013 to Jan 2016 · 2 yrs 11 mos
+Director of Operations at Thomas Inventory Services LLC | Scaling Excellence Through Analytics & Automation
+As Director of Operations at Thomas Inventory Services, I led the company through a period of significant expansion, scaling operational capabilities while implementing advanced analytics and automation solutions that transformed our 3PL services for marketplace sellers.
+
+Key Responsibilities:
+• Multi-Facility Management: Orchestrated operations across expanding warehouse network, standardizing processes while maintaining location-specific optimizations
+• Technology Integration: Implemented integrated warehouse management system with custom analytics modules that provided end-to-end visibility across all operational touchpoints
+• Strategic Planning: Developed capacity forecasting models that aligned staffing, equipment, and facility expansion with projected client growth
+• Cross-Functional Leadership: Collaborated with client success and finance teams to create data-driven service offerings that maximized value while maintaining profitability
+
+Notable Achievements:
+• Scaled operations from processing 1.2M to 3.5M units annually while improving efficiency metrics by 22% through process automation
+• Designed and implemented cross-facility inventory balancing system that optimized storage utilization and reduced transportation costs by 18%
+• Created predictive analytics model for labor forecasting that reduced overtime costs by 35% while maintaining service level agreements
+• Established specialized processing divisions for high-volume clients, increasing retention rates and expanding service adoption
+
+My leadership approach focused on building scalable operational infrastructure powered by data analytics, enabling the company to triple processing volume while enhancing service quality and operational efficiency.Director of Operations at Thomas Inventory Services LLC | Scaling Excellence Through Analytics & Automation As Director of Operations at Thomas Inventory Services, I led the company through a period of significant expansion, scaling operational capabilities while implementing advanced analytics and automation solutions that transformed our 3PL services for marketplace sellers. Key Responsibilities: • Multi-Facility Management: Orchestrated operations across expanding warehouse network, standardizing processes while maintaining location-specific optimizations • Technology Integration: Implemented integrated warehouse management system with custom analytics modules that provided end-to-end visibility across all operational touchpoints • Strategic Planning: Developed capacity forecasting models that aligned staffing, equipment, and facility expansion with projected client growth • Cross-Functional Leadership: Collaborated with client success and finance teams to create data-driven service offerings that maximized value while maintaining profitability Notable Achievements: • Scaled operations from processing 1.2M to 3.5M units annually while improving efficiency metrics by 22% through process automation • Designed and implemented cross-facility inventory balancing system that optimized storage utilization and reduced transportation costs by 18% • Created predictive analytics model for labor forecasting that reduced overtime costs by 35% while maintaining service level agreements • Established specialized processing divisions for high-volume clients, increasing retention rates and expanding service adoption My leadership approach focused on building scalable operational infrastructure powered by data analytics, enabling the company to triple processing volume while enhancing service quality and operational efficiency.
+Operations Manager
+Operations Manager
+Sep 2012 - Mar 2013 · 7 mosSep 2012 to Mar 2013 · 7 mos
+Somerville, NJSomerville, NJ
+Operations Manager at Thomas Inventory Services LLC | Logistics & Analytics Optimization
+As Operations Manager at Thomas Inventory Services, I established foundational operational systems during a critical growth phase, implementing data-driven processes that enhanced efficiency for this specialized 3PL provider serving marketplace sellers.
+
+Key Responsibilities:
+• Warehouse Optimization: Designed and implemented inventory management protocols that improved processing accuracy while reducing handling time for FBA prep services
+• Analytics Implementation: Developed custom reporting dashboards that provided real-time visibility into operational KPIs, enabling data-driven decision making
+• Process Engineering: Created standardized workflows for container unloading, inventory processing, and fulfillment that scaled with increasing volume
+• Team Development: Built and trained a high-performing warehouse team, establishing performance metrics and quality control standards
+
+Notable Achievements:
+• Implemented inventory tracking system that reduced processing errors by 32% while increasing daily throughput capacity by 45%
+• Designed warehouse layout optimization that improved space utilization by 28%, enabling processing of 1.2M+ units annually
+• Created client onboarding protocols that reduced setup time by 60% while ensuring consistent service delivery
+• Established data-driven quality control processes that maintained 99.7% accuracy rates despite 3x volume growthOperations Manager at Thomas Inventory Services LLC | Logistics & Analytics Optimization As Operations Manager at Thomas Inventory Services, I established foundational operational systems during a critical growth phase, implementing data-driven processes that enhanced efficiency for this specialized 3PL provider serving marketplace sellers. Key Responsibilities: • Warehouse Optimization: Designed and implemented inventory management protocols that improved processing accuracy while reducing handling time for FBA prep services • Analytics Implementation: Developed custom reporting dashboards that provided real-time visibility into operational KPIs, enabling data-driven decision making • Process Engineering: Created standardized workflows for container unloading, inventory processing, and fulfillment that scaled with increasing volume • Team Development: Built and trained a high-performing warehouse team, establishing performance metrics and quality control standards Notable Achievements: • Implemented inventory tracking system that reduced processing errors by 32% while increasing daily throughput capacity by 45% • Designed warehouse layout optimization that improved space utilization by 28%, enabling processing of 1.2M+ units annually • Created client onboarding protocols that reduced setup time by 60% while ensuring consistent service delivery • Established data-driven quality control processes that maintained 99.7% accuracy rates despite 3x volume growth
+USAA logo
+Financial Foundations Specialist
+Financial Foundations Specialist
+USAA · Full-timeUSAA · Full-time
+Oct 2009 - Sep 2012 · 3 yrsOct 2009 to Sep 2012 · 3 yrs
+Tampa, FL · On-siteTampa, FL · On-site
+DRC Collective logo
+Business Controller
+Business Controller
+DRC Collective · Full-timeDRC Collective · Full-time
+Sep 2007 - Oct 2009 · 2 yrs 2 mosSep 2007 to Oct 2009 · 2 yrs 2 mos
+Philadelphia, PA · On-site
+
+
+Merrill Lynch logo
+Finance Account Specialist
+Finance Account Specialist
+Merrill Lynch · Full-timeMerrill Lynch · Full-time
+Aug 2005 - Sep 2007 · 2 yrs 2 mosAug 2005 to Sep 2007 · 2 yrs 2 mos
+Hopewell, New Jersey, United States · On-site

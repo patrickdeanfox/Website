@@ -1,0 +1,2445 @@
+{
+  "exportedAt": "2026-02-25T16:58:47.528Z",
+  "portal": "https://pe-demo.zuarbase.net",
+  "pagesTotal": 7,
+  "datasourcesTotal": 5,
+  "user": {
+    "id": "ba193c53-7e6e-4ebd-9a7d-3fc4ae9e0c9b",
+    "fullname": "prasco",
+    "email": null,
+    "is_admin": null,
+    "groups": [
+      "Example"
+    ],
+    "source": "LOCAL"
+  },
+  "pageIndex": [
+    {
+      "id": "0342c6fc-d68a-48de-8e84-75a58f63d884",
+      "name": "Cost Savings",
+      "slug": "cost-savings",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/cost-savings",
+      "tags": [],
+      "blockCount": 2,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2025-12-02T14:54:05.435021+00:00",
+      "updated_at": "2026-02-18T19:55:03.549539+00:00"
+    },
+    {
+      "id": "aaf006d1-3d22-455e-a80e-8cf71c0f1bb1",
+      "name": "Action Data",
+      "slug": "action-data",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/action-data",
+      "tags": [],
+      "blockCount": 2,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2025-12-02T15:59:14.800152+00:00",
+      "updated_at": "2026-02-18T19:55:43.371292+00:00"
+    },
+    {
+      "id": "affe55e9-f7a9-49de-ace2-d134a77b5443",
+      "name": "Home",
+      "slug": "kpi-landing-page",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/kpi-landing-page",
+      "tags": [],
+      "blockCount": 2,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2025-12-02T20:38:51.316484+00:00",
+      "updated_at": "2026-02-11T21:36:29.971345+00:00"
+    },
+    {
+      "id": "91ea9851-c463-4cf3-9a90-ffc894384d8f",
+      "name": "EBITDA",
+      "slug": "ebitda",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/ebitda",
+      "tags": [],
+      "blockCount": 2,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2025-12-02T15:49:37.128585+00:00",
+      "updated_at": "2026-02-18T19:54:34.038359+00:00"
+    },
+    {
+      "id": "0df630c5-b5fc-4bdc-8372-e3479b8cfff8",
+      "name": "Dev Page",
+      "slug": "dev-page",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/dev-page",
+      "tags": [],
+      "blockCount": 0,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2025-12-03T16:41:01.959128+00:00",
+      "updated_at": "2025-12-03T16:43:11.826188+00:00"
+    },
+    {
+      "id": "b62ea794-44a1-4f6d-827d-815ea1aedb7d",
+      "name": "Copy of Home",
+      "slug": "copy-of-home",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/copy-of-home",
+      "tags": [],
+      "blockCount": 1,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2026-02-02T21:51:17.963588+00:00",
+      "updated_at": "2026-02-11T20:50:48.427842+00:00"
+    },
+    {
+      "id": "ad9e5ae7-79b5-4b96-974b-1db3edaea489",
+      "name": "Writeback",
+      "slug": "writeback",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/writeback",
+      "tags": [],
+      "blockCount": 3,
+      "blockTypes": [],
+      "datasourcesUsed": [],
+      "hasLiveScope": false,
+      "created_at": "2026-02-12T22:37:11.504478+00:00",
+      "updated_at": "2026-02-18T01:36:28.345851+00:00"
+    }
+  ],
+  "pageListSnapshot": [
+    {
+      "user_id": null,
+      "name": "Cost Savings",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "0342c6fc-d68a-48de-8e84-75a58f63d884",
+      "updated_at": "2026-02-18T19:55:03.549539+00:00",
+      "created_at": "2025-12-02T14:54:05.435021+00:00",
+      "data": {
+        "slug": "cost-savings",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [
+            "3c5bad3f-451a-46be-9d70-072f15486975",
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+          ],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {
+              "3c5bad3f-451a-46be-9d70-072f15486975": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "md": {
+              "3c5bad3f-451a-46be-9d70-072f15486975": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "sm": {
+              "3c5bad3f-451a-46be-9d70-072f15486975": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            }
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "customProperties": {}
+        }
+      }
+    },
+    {
+      "user_id": null,
+      "name": "Action Data",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "aaf006d1-3d22-455e-a80e-8cf71c0f1bb1",
+      "updated_at": "2026-02-18T19:55:43.371292+00:00",
+      "created_at": "2025-12-02T15:59:14.800152+00:00",
+      "data": {
+        "slug": "action-data",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [
+            "81a4e2f9-8ad8-4448-b264-361f58334875",
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+          ],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {
+              "81a4e2f9-8ad8-4448-b264-361f58334875": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "md": {
+              "81a4e2f9-8ad8-4448-b264-361f58334875": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "sm": {
+              "81a4e2f9-8ad8-4448-b264-361f58334875": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            }
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "fonts": [],
+          "customProperties": {}
+        }
+      }
+    },
+    {
+      "user_id": null,
+      "name": "Home",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "affe55e9-f7a9-49de-ace2-d134a77b5443",
+      "updated_at": "2026-02-11T21:36:29.971345+00:00",
+      "created_at": "2025-12-02T20:38:51.316484+00:00",
+      "data": {
+        "slug": "kpi-landing-page",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [
+            "dac4c1db-70d2-4d36-9af5-1676ccd334fa",
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+          ],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {
+              "dac4c1db-70d2-4d36-9af5-1676ccd334fa": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "md": {
+              "dac4c1db-70d2-4d36-9af5-1676ccd334fa": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 66,
+                "top": 0,
+                "height": 96,
+                "width": 30,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "sm": {
+              "dac4c1db-70d2-4d36-9af5-1676ccd334fa": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 70,
+                "top": 0,
+                "height": 100,
+                "width": 30,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            }
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "customProperties": {}
+        }
+      }
+    },
+    {
+      "user_id": null,
+      "name": "EBITDA",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "91ea9851-c463-4cf3-9a90-ffc894384d8f",
+      "updated_at": "2026-02-18T19:54:34.038359+00:00",
+      "created_at": "2025-12-02T15:49:37.128585+00:00",
+      "data": {
+        "slug": "ebitda",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [
+            "62e4a61e-84b0-484d-b2f4-0ad0c0525762",
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+          ],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {
+              "62e4a61e-84b0-484d-b2f4-0ad0c0525762": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "md": {
+              "62e4a61e-84b0-484d-b2f4-0ad0c0525762": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "sm": {
+              "62e4a61e-84b0-484d-b2f4-0ad0c0525762": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            }
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "fonts": [],
+          "customProperties": {}
+        }
+      }
+    },
+    {
+      "user_id": null,
+      "name": "Dev Page",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "0df630c5-b5fc-4bdc-8372-e3479b8cfff8",
+      "updated_at": "2025-12-03T16:43:11.826188+00:00",
+      "created_at": "2025-12-03T16:41:01.959128+00:00",
+      "data": {
+        "slug": "dev-page",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {},
+            "md": {},
+            "sm": {}
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "customProperties": {}
+        }
+      }
+    },
+    {
+      "user_id": null,
+      "name": "Copy of Home",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "b62ea794-44a1-4f6d-827d-815ea1aedb7d",
+      "updated_at": "2026-02-11T20:50:48.427842+00:00",
+      "created_at": "2026-02-02T21:51:17.963588+00:00",
+      "data": {
+        "slug": "copy-of-home",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+          ],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "md": {
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 96,
+                "width": 96,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "sm": {
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            }
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "customProperties": {}
+        }
+      }
+    },
+    {
+      "user_id": null,
+      "name": "Writeback",
+      "order": 1000,
+      "icon": null,
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "id": "ad9e5ae7-79b5-4b96-974b-1db3edaea489",
+      "updated_at": "2026-02-18T01:36:28.345851+00:00",
+      "created_at": "2026-02-12T22:37:11.504478+00:00",
+      "data": {
+        "slug": "writeback",
+        "grid": {
+          "id": "content",
+          "layouts": {
+            "lg": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 2
+            },
+            "md": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 6
+            },
+            "sm": {
+              "width": 100,
+              "height": 100,
+              "align": "center",
+              "sizingUnit": "%",
+              "cellSize": 10
+            }
+          },
+          "blocks": [
+            "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c",
+            "6058ea4e-7873-45f7-ab89-7ad7b93b47c2",
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+          ],
+          "sidebar": {
+            "collapsable": false,
+            "openIcon": "fa-chevron-left",
+            "closeIcon": "fa-chevron-right",
+            "iconPosition": "middle"
+          },
+          "blockHidden": [],
+          "blockLayouts": {
+            "lg": {
+              "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c": {
+                "left": 0,
+                "top": 12,
+                "height": 86,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "6058ea4e-7873-45f7-ab89-7ad7b93b47c2": {
+                "left": 0,
+                "top": 0,
+                "height": 30,
+                "width": 54,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 1
+              }
+            },
+            "md": {
+              "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c": {
+                "left": 6,
+                "top": 6,
+                "height": 78,
+                "width": 72,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "6058ea4e-7873-45f7-ab89-7ad7b93b47c2": {
+                "left": 0,
+                "top": 0,
+                "height": 30,
+                "width": 54,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 102,
+                "width": 102,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            },
+            "sm": {
+              "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c": {
+                "left": 10,
+                "top": 0,
+                "height": 80,
+                "width": 70,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "6058ea4e-7873-45f7-ab89-7ad7b93b47c2": {
+                "left": 0,
+                "top": 0,
+                "height": 30,
+                "width": 50,
+                "sizingUnit": "%",
+                "zIndex": 0
+              },
+              "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+                "left": 0,
+                "top": 0,
+                "height": 100,
+                "width": 100,
+                "sizingUnit": "%",
+                "zIndex": 0
+              }
+            }
+          },
+          "layout": {
+            "width": 100,
+            "height": 100,
+            "align": "center",
+            "sizingUnit": "%",
+            "cellSize": 2
+          }
+        },
+        "javascripts": {
+          "onPageLoad": []
+        },
+        "css": [],
+        "theme": {
+          "template": {
+            "header": true,
+            "leftSidebar": true,
+            "rightSidebar": false,
+            "footer": false
+          },
+          "customProperties": {}
+        }
+      }
+    }
+  ],
+  "datasourceRegistry": [
+    {
+      "id": "685cae24-a0b9-4369-810e-7ea776802ef8",
+      "name": "KPI Data",
+      "loaded": false,
+      "isActive": false,
+      "columns": [
+        "__index__",
+        "tenant_name",
+        "company_name",
+        "parent_account_name",
+        "success_manager",
+        "id",
+        "name",
+        "value",
+        "change",
+        "type",
+        "chart_data",
+        "category"
+      ],
+      "columnTypes": {},
+      "filters": {},
+      "rangeFilters": {},
+      "filtersParams": {},
+      "filterableColumns": [],
+      "querySet": [],
+      "error": null
+    },
+    {
+      "id": "809ba8fd-47ef-4ed8-ab2a-f110b3cfe5c0",
+      "name": "Cost Savings",
+      "loaded": false,
+      "isActive": false,
+      "columns": [
+        "__index__",
+        "tenant_name",
+        "process_date",
+        "total_dynamic_session_offered",
+        "total_dynamic_session_accepted",
+        "total_dynamic_time_offered",
+        "total_dynamic_time_accepted",
+        "total_dynamic_time_taken",
+        "total_coaching_session_offered",
+        "total_coaching_session_accepted",
+        "total_coaching_time_offered",
+        "total_coaching_time_accepted",
+        "total_coaching_time_taken",
+        "total_active_users_receiving_sessions",
+        "total_active_user_count",
+        "total_active_agent_count",
+        "total_number_of_users_logged_in",
+        "total_dynamic_session",
+        "intraday_staffing",
+        "re_skilling",
+        "channel_balancing",
+        "alerts_notifications",
+        "handle_time_acw",
+        "handle_time_talk_time",
+        "handle_time_hold",
+        "handle_time_other",
+        "occupancy_vto",
+        "occupancy_vot",
+        "occupancy_channel_balancing",
+        "occupancy_other",
+        "other_adoption_alert",
+        "other_adoption_miscellaneous",
+        "other_adoption_volume_alerts",
+        "shrinkage_training",
+        "shrinkage_off_phone_tasks",
+        "shrinkage_time_channel_balancing",
+        "shrinkage_adherence",
+        "shrinkage_break",
+        "shrinkage_lunch",
+        "shrinkage_ot_avoidance",
+        "shrinkage_other",
+        "no_category",
+        "total",
+        "unique_users_logged_in_last_7_days",
+        "total_self_directed_session",
+        "coaching",
+        "incident_management",
+        "task_management",
+        "back_office_active_non_work",
+        "back_office_handle_time",
+        "back_office_idle_time",
+        "back_office_other",
+        "account_id",
+        "name",
+        "parent_account_name",
+        "mm_active_customer__c",
+        "parent_id",
+        "hourly_rate_back_office__c",
+        "mm_availability__c",
+        "mm_cto_acv__c",
+        "mm_hourly_rate__c",
+        "mm_occupancy__c",
+        "mm_wfm_hourly_rate__c",
+        "industry",
+        "parent_industry__c",
+        "success_manager",
+        "coaching_cto",
+        "tm_cto",
+        "adherence_cto",
+        "break_lunch_cto",
+        "staffing_cto",
+        "handle_time_cto",
+        "efficiency_cto",
+        "back_office_cto",
+        "total_cto_v2",
+        "max_date",
+        "ninety_days_ago",
+        "daily_total_cto",
+        "ninety_day_avg_annualized",
+        "total_active_agent_count_for_burnout",
+        "burnout_cto",
+        "operational_score__c",
+        "platform_score__c",
+        "recruitment_cost_per_agent",
+        "attrition_improvement_pct",
+        "employee_coverage_pct"
+      ],
+      "columnTypes": {
+        "employee_coverage_pct": "number_decimal"
+      },
+      "filters": {},
+      "rangeFilters": {},
+      "filtersParams": {},
+      "filterableColumns": [],
+      "querySet": [],
+      "error": null
+    },
+    {
+      "id": "48ad8dba-85cd-4ef7-8377-5f9131101e03",
+      "name": "actions",
+      "loaded": false,
+      "isActive": false,
+      "columns": [
+        "__index__",
+        "tenant_name",
+        "process_date",
+        "total_dynamic_session_offered",
+        "total_dynamic_session_accepted",
+        "total_dynamic_time_offered",
+        "total_dynamic_time_accepted",
+        "total_dynamic_time_taken",
+        "total_coaching_session_offered",
+        "total_coaching_session_accepted",
+        "total_coaching_time_offered",
+        "total_coaching_time_accepted",
+        "total_coaching_time_taken",
+        "total_active_users_receiving_sessions",
+        "total_active_user_count",
+        "total_active_agent_count",
+        "total_number_of_users_logged_in",
+        "total_dynamic_session",
+        "intraday_staffing",
+        "re_skilling",
+        "channel_balancing",
+        "alerts_notifications",
+        "handle_time_acw",
+        "handle_time_talk_time",
+        "handle_time_hold",
+        "handle_time_other",
+        "occupancy_vto",
+        "occupancy_vot",
+        "occupancy_channel_balancing",
+        "occupancy_other",
+        "other_adoption_alert",
+        "other_adoption_miscellaneous",
+        "other_adoption_volume_alerts",
+        "shrinkage_training",
+        "shrinkage_off_phone_tasks",
+        "shrinkage_time_channel_balancing",
+        "shrinkage_adherence",
+        "shrinkage_break",
+        "shrinkage_lunch",
+        "shrinkage_ot_avoidance",
+        "shrinkage_other",
+        "no_category",
+        "total",
+        "unique_users_logged_in_last_7_days",
+        "total_self_directed_session",
+        "coaching",
+        "incident_management",
+        "task_management",
+        "back_office_active_non_work",
+        "back_office_handle_time",
+        "back_office_idle_time",
+        "back_office_other",
+        "account_id",
+        "name",
+        "parent_account_name",
+        "mm_active_customer__c",
+        "parent_id",
+        "hourly_rate_back_office__c",
+        "mm_availability__c",
+        "mm_cto_acv__c",
+        "mm_hourly_rate__c",
+        "mm_occupancy__c",
+        "mm_wfm_hourly_rate__c",
+        "industry",
+        "parent_industry__c",
+        "success_manager",
+        "coaching_cto",
+        "tm_cto",
+        "adherence_cto",
+        "break_lunch_cto",
+        "staffing_cto",
+        "handle_time_cto",
+        "efficiency_cto",
+        "back_office_cto",
+        "total_cto_v2",
+        "max_date",
+        "ninety_days_ago",
+        "daily_total_cto",
+        "ninety_day_avg_annualized",
+        "operational_score__c",
+        "platform_score__c",
+        "total_active_agent_count_for_burnout",
+        "burnout_cto",
+        "attrition_improvement_pct",
+        "employee_coverage_pct",
+        "recruitment_cost_per_agent"
+      ],
+      "columnTypes": {},
+      "filters": {},
+      "rangeFilters": {},
+      "filtersParams": {},
+      "filterableColumns": [],
+      "querySet": [],
+      "error": null
+    },
+    {
+      "id": "780070c7-a02f-4608-8460-be709721ed6e",
+      "name": "Performance Trend",
+      "loaded": true,
+      "isActive": true,
+      "columns": [
+        "portfolio_value",
+        "overall_ebitda_margin",
+        "patient_growth",
+        "risk_factor",
+        "month",
+        "revenue_growth",
+        "monthly_ebitda_margin"
+      ],
+      "columnTypes": {},
+      "filters": {},
+      "rangeFilters": {},
+      "filtersParams": {},
+      "filterableColumns": [],
+      "querySet": [
+        {
+          "id": "f8645158-28e6-4f66-a856-e1802d78981b",
+          "source": "780070c7-a02f-4608-8460-be709721ed6e",
+          "columns": [
+            "*"
+          ],
+          "where": null,
+          "order_by": null,
+          "limit": null,
+          "enabled": true,
+          "results": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "03b7e5a7-1ef4-4b60-ad86-17bec73af645",
+      "name": "Last 90",
+      "loaded": false,
+      "isActive": false,
+      "columns": [
+        "__index__",
+        "lookback_days",
+        "parent_account_name",
+        "total_cto_v2_sum",
+        "ab_fixed_sum",
+        "success_manager",
+        "cto_over_ab_fixed_ratio",
+        "name"
+      ],
+      "columnTypes": {},
+      "filters": {},
+      "rangeFilters": {},
+      "filtersParams": {},
+      "filterableColumns": [],
+      "querySet": [],
+      "error": null
+    }
+  ],
+  "datasourceUsageMap": [
+    {
+      "id": "685cae24-a0b9-4369-810e-7ea776802ef8",
+      "name": "KPI Data",
+      "usedOnPages": []
+    },
+    {
+      "id": "809ba8fd-47ef-4ed8-ab2a-f110b3cfe5c0",
+      "name": "Cost Savings",
+      "usedOnPages": []
+    },
+    {
+      "id": "48ad8dba-85cd-4ef7-8377-5f9131101e03",
+      "name": "actions",
+      "usedOnPages": []
+    },
+    {
+      "id": "780070c7-a02f-4608-8460-be709721ed6e",
+      "name": "Performance Trend",
+      "usedOnPages": []
+    },
+    {
+      "id": "03b7e5a7-1ef4-4b60-ad86-17bec73af645",
+      "name": "Last 90",
+      "usedOnPages": []
+    }
+  ],
+  "pages": [
+    {
+      "id": "0342c6fc-d68a-48de-8e84-75a58f63d884",
+      "name": "Cost Savings",
+      "slug": "cost-savings",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/cost-savings",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2025-12-02T14:54:05.435021+00:00",
+      "updated_at": "2026-02-18T19:55:03.549539+00:00",
+      "extractedAt": "2026-02-25T16:58:47.527Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 2,
+        "blockUUIDs": [
+          "3c5bad3f-451a-46be-9d70-072f15486975",
+          "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+        ],
+        "primaryBreakpoint": "lg",
+        "blockLayouts": {
+          "lg": {
+            "3c5bad3f-451a-46be-9d70-072f15486975": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "md": {
+            "3c5bad3f-451a-46be-9d70-072f15486975": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "sm": {
+            "3c5bad3f-451a-46be-9d70-072f15486975": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          }
+        }
+      },
+      "blocks": [
+        {
+          "uuid": "3c5bad3f-451a-46be-9d70-072f15486975",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 3c5bad3f-451a-46be-9d70-072f15486975."
+        },
+        {
+          "uuid": "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 4a5a012e-9d78-4f1b-93f7-eb763d86ccaf."
+        }
+      ],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    },
+    {
+      "id": "aaf006d1-3d22-455e-a80e-8cf71c0f1bb1",
+      "name": "Action Data",
+      "slug": "action-data",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/action-data",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2025-12-02T15:59:14.800152+00:00",
+      "updated_at": "2026-02-18T19:55:43.371292+00:00",
+      "extractedAt": "2026-02-25T16:58:47.527Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "fonts": [],
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 2,
+        "blockUUIDs": [
+          "81a4e2f9-8ad8-4448-b264-361f58334875",
+          "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+        ],
+        "primaryBreakpoint": "lg",
+        "blockLayouts": {
+          "lg": {
+            "81a4e2f9-8ad8-4448-b264-361f58334875": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "md": {
+            "81a4e2f9-8ad8-4448-b264-361f58334875": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "sm": {
+            "81a4e2f9-8ad8-4448-b264-361f58334875": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          }
+        }
+      },
+      "blocks": [
+        {
+          "uuid": "81a4e2f9-8ad8-4448-b264-361f58334875",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 81a4e2f9-8ad8-4448-b264-361f58334875."
+        },
+        {
+          "uuid": "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 4a5a012e-9d78-4f1b-93f7-eb763d86ccaf."
+        }
+      ],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    },
+    {
+      "id": "affe55e9-f7a9-49de-ace2-d134a77b5443",
+      "name": "Home",
+      "slug": "kpi-landing-page",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/kpi-landing-page",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2025-12-02T20:38:51.316484+00:00",
+      "updated_at": "2026-02-11T21:36:29.971345+00:00",
+      "extractedAt": "2026-02-25T16:58:47.527Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 2,
+        "blockUUIDs": [
+          "dac4c1db-70d2-4d36-9af5-1676ccd334fa",
+          "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+        ],
+        "primaryBreakpoint": "lg",
+        "blockLayouts": {
+          "lg": {
+            "dac4c1db-70d2-4d36-9af5-1676ccd334fa": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "md": {
+            "dac4c1db-70d2-4d36-9af5-1676ccd334fa": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 66,
+              "top": 0,
+              "height": 96,
+              "width": 30,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "sm": {
+            "dac4c1db-70d2-4d36-9af5-1676ccd334fa": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 70,
+              "top": 0,
+              "height": 100,
+              "width": 30,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          }
+        }
+      },
+      "blocks": [
+        {
+          "uuid": "dac4c1db-70d2-4d36-9af5-1676ccd334fa",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: dac4c1db-70d2-4d36-9af5-1676ccd334fa."
+        },
+        {
+          "uuid": "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 66,
+              "top": 0,
+              "height": 96,
+              "width": 30,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 70,
+              "top": 0,
+              "height": 100,
+              "width": 30,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 4a5a012e-9d78-4f1b-93f7-eb763d86ccaf."
+        }
+      ],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    },
+    {
+      "id": "91ea9851-c463-4cf3-9a90-ffc894384d8f",
+      "name": "EBITDA",
+      "slug": "ebitda",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/ebitda",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2025-12-02T15:49:37.128585+00:00",
+      "updated_at": "2026-02-18T19:54:34.038359+00:00",
+      "extractedAt": "2026-02-25T16:58:47.527Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "fonts": [],
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 2,
+        "blockUUIDs": [
+          "62e4a61e-84b0-484d-b2f4-0ad0c0525762",
+          "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+        ],
+        "primaryBreakpoint": "lg",
+        "blockLayouts": {
+          "lg": {
+            "62e4a61e-84b0-484d-b2f4-0ad0c0525762": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "md": {
+            "62e4a61e-84b0-484d-b2f4-0ad0c0525762": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "sm": {
+            "62e4a61e-84b0-484d-b2f4-0ad0c0525762": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          }
+        }
+      },
+      "blocks": [
+        {
+          "uuid": "62e4a61e-84b0-484d-b2f4-0ad0c0525762",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 62e4a61e-84b0-484d-b2f4-0ad0c0525762."
+        },
+        {
+          "uuid": "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 4a5a012e-9d78-4f1b-93f7-eb763d86ccaf."
+        }
+      ],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    },
+    {
+      "id": "0df630c5-b5fc-4bdc-8372-e3479b8cfff8",
+      "name": "Dev Page",
+      "slug": "dev-page",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/dev-page",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2025-12-03T16:41:01.959128+00:00",
+      "updated_at": "2025-12-03T16:43:11.826188+00:00",
+      "extractedAt": "2026-02-25T16:58:47.527Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 0,
+        "blockUUIDs": [],
+        "primaryBreakpoint": null,
+        "blockLayouts": {
+          "lg": {},
+          "md": {},
+          "sm": {}
+        }
+      },
+      "blocks": [],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    },
+    {
+      "id": "b62ea794-44a1-4f6d-827d-815ea1aedb7d",
+      "name": "Copy of Home",
+      "slug": "copy-of-home",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/copy-of-home",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2026-02-02T21:51:17.963588+00:00",
+      "updated_at": "2026-02-11T20:50:48.427842+00:00",
+      "extractedAt": "2026-02-25T16:58:47.528Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 1,
+        "blockUUIDs": [
+          "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+        ],
+        "primaryBreakpoint": "lg",
+        "blockLayouts": {
+          "lg": {
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "md": {
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 96,
+              "width": 96,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "sm": {
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          }
+        }
+      },
+      "blocks": [
+        {
+          "uuid": "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 96,
+              "width": 96,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 4a5a012e-9d78-4f1b-93f7-eb763d86ccaf."
+        }
+      ],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    },
+    {
+      "id": "ad9e5ae7-79b5-4b96-974b-1db3edaea489",
+      "name": "Writeback",
+      "slug": "writeback",
+      "pageUrl": "https://pe-demo.zuarbase.net/p/writeback",
+      "tags": [],
+      "access": {
+        "groups": []
+      },
+      "order": 1000,
+      "icon": null,
+      "created_at": "2026-02-12T22:37:11.504478+00:00",
+      "updated_at": "2026-02-18T01:36:28.345851+00:00",
+      "extractedAt": "2026-02-25T16:58:47.528Z",
+      "theme": {
+        "template": {
+          "header": true,
+          "leftSidebar": true,
+          "rightSidebar": false,
+          "footer": false
+        },
+        "customProperties": {}
+      },
+      "gridLayout": {
+        "width": 100,
+        "height": 100,
+        "align": "center",
+        "sizingUnit": "%",
+        "cellSize": 2
+      },
+      "blockHidden": [],
+      "sidebar": {
+        "collapsable": false,
+        "openIcon": "fa-chevron-left",
+        "closeIcon": "fa-chevron-right",
+        "iconPosition": "middle"
+      },
+      "css": [],
+      "javascripts": {
+        "onPageLoad": []
+      },
+      "pageStructure": {
+        "blockCount": 3,
+        "blockUUIDs": [
+          "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c",
+          "6058ea4e-7873-45f7-ab89-7ad7b93b47c2",
+          "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf"
+        ],
+        "primaryBreakpoint": "lg",
+        "blockLayouts": {
+          "lg": {
+            "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c": {
+              "left": 0,
+              "top": 12,
+              "height": 86,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "6058ea4e-7873-45f7-ab89-7ad7b93b47c2": {
+              "left": 0,
+              "top": 0,
+              "height": 30,
+              "width": 54,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 1
+            }
+          },
+          "md": {
+            "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c": {
+              "left": 6,
+              "top": 6,
+              "height": 78,
+              "width": 72,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "6058ea4e-7873-45f7-ab89-7ad7b93b47c2": {
+              "left": 0,
+              "top": 0,
+              "height": 30,
+              "width": 54,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "sm": {
+            "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c": {
+              "left": 10,
+              "top": 0,
+              "height": 80,
+              "width": 70,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "6058ea4e-7873-45f7-ab89-7ad7b93b47c2": {
+              "left": 0,
+              "top": 0,
+              "height": 30,
+              "width": 50,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          }
+        }
+      },
+      "blocks": [
+        {
+          "uuid": "ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 12,
+              "height": 86,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 6,
+              "top": 6,
+              "height": 78,
+              "width": 72,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 10,
+              "top": 0,
+              "height": 80,
+              "width": 70,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: ff1d5821-4dcf-4b1a-bfd8-1dbff5c9007c."
+        },
+        {
+          "uuid": "6058ea4e-7873-45f7-ab89-7ad7b93b47c2",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 30,
+              "width": 54,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 30,
+              "width": 54,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 30,
+              "width": 50,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 6058ea4e-7873-45f7-ab89-7ad7b93b47c2."
+        },
+        {
+          "uuid": "4a5a012e-9d78-4f1b-93f7-eb763d86ccaf",
+          "blockType": null,
+          "blockTitle": null,
+          "datasourceId": null,
+          "scopeKeys": null,
+          "blockConfig": {},
+          "data": null,
+          "layouts": {
+            "lg": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 1
+            },
+            "md": {
+              "left": 0,
+              "top": 0,
+              "height": 102,
+              "width": 102,
+              "sizingUnit": "%",
+              "zIndex": 0
+            },
+            "sm": {
+              "left": 0,
+              "top": 0,
+              "height": 100,
+              "width": 100,
+              "sizingUnit": "%",
+              "zIndex": 0
+            }
+          },
+          "error": "getScope: No HTML block found for ID: 4a5a012e-9d78-4f1b-93f7-eb763d86ccaf."
+        }
+      ],
+      "blockTypes": [],
+      "datasourceIds": [],
+      "datasources": [],
+      "hasLiveScope": false
+    }
+  ]
+}

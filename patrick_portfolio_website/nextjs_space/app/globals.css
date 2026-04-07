@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-hydration-error] {
+  display: none !important;
+}
+
+/* 
+ * Color Theory Applied:
+ * - Primary Blue (#2563EB): Trust, professionalism, stability
+ * - Teal (#0D9488): Growth, adaptability, versatility
+ * - Amber (#F59E0B): Energy, creativity, highlighting key achievements
+ * - Light backgrounds: Cleaner, more approachable feel
+ */
+:root {
+  --accent: #2563EB;
+  --accent-light: #3B82F6;
+  --accent-dark: #1D4ED8;
+  
+  --secondary: #0D9488;
+  --secondary-light: #14B8A6;
+  --secondary-dark: #0F766E;
+  
+  --highlight: #F59E0B;
+  --highlight-light: #FBBF24;
+  
+  --charcoal: #1E293B;
+  --slate: #475569;
+  --cream: #F8FAFC;
+  
+  /* Lighter background tones */
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+  --bg-card: #1E293B;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #0F172A 0%, #1A2332 50%, #0F172A 100%);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Gradient text - blue to cyan */
+.gradient-text {
+  background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+}
+
+.skill-tag {
+  @apply px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.skill-tag:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar - blue accent */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B82F6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60A5FA;
+}
+
+/* Divider */
+.divider-elegant {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-8 py-3 rounded-lg font-medium transition-all duration-300;
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  @apply px-8 py-3 rounded-lg font-medium transition-all duration-300;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Section-specific backgrounds for visual differentiation */
+.section-primary {
+  background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+}
+
+.section-dark {
+  background: linear-gradient(180deg, #0F172A 0%, #0C1220 100%);
+}
+
+.section-accent {
+  background: linear-gradient(180deg, #0F172A 0%, #0F1D2E 50%, #0F172A 100%);
+  position: relative;
+}
+
+.section-accent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-teal {
+  background: linear-gradient(180deg, #0F172A 0%, #0D1F1E 50%, #0F172A 100%);
+  position: relative;
+}
+
+.section-teal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(13, 148, 136, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-violet {
+  background: linear-gradient(180deg, #0F172A 0%, #1A1528 50%, #0F172A 100%);
+  position: relative;
+}
+
+.section-violet::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-amber {
+  background: linear-gradient(180deg, #0F172A 0%, #1A1810 50%, #0F172A 100%);
+  position: relative;
+}
+
+.section-amber::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Subtle grid pattern overlay */
+.pattern-grid {
+  position: relative;
+}
+
+.pattern-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}

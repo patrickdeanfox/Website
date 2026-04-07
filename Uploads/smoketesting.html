@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>smoke testing pdf report generator</title>
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<style>
+/* ===========================================
+   Global Reset
+=========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================================
+   Global Wrapper Styles (A4)
+=========================================== */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  background-color: #9EBED3;
+}
+
+/* Ensure the wrapper background doesn’t bleed when rasterizing */
+#content-wrapper {
+  background: #9EBED3;
+}
+
+/* Stabilize newpage sizes for raster */
+.newpage {
+  width: 215.9mm;
+  min-height: 279.4mm;
+  /* Force consistent layout to reduce html2canvas reflow cost */
+  display: block;
+}
+
+/* Make chart/map snapshot images behave like their containers */
+.chart-container img,
+#map + img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Loading overlay already defined in your CSS; ensure it’s above all */
+#pdf-loading-overlay {
+  z-index: 9999;
+}
+
+.newpage {
+  width: 215.9mm;
+  min-height: 279.4mm;
+  margin: 2px auto;
+  padding: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  page-break-inside: avoid;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+}
+
+.page-break {
+  display: block;
+  height: 20px;
+  margin-left: -10%;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  background: #9EBED3;
+  width: 150%;
+}
+
+.definition-term {
+  padding-top: 15px !important;
+}
+
+/* ===========================================
+   Button Styles
+=========================================== */
+.report-buttons-wrapper {
+  text-align: right;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.report-button {
+  background-color: #0A5B8B !important;
+  color: white !important;
+  font-size: 11px !important;
+  padding: 6px 12px !important;
+  border: none !important;
+  border-radius: 3px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  min-width: 100px !important;
+}
+
+.report-button:hover {
+  background-color: #0B6B9C !important;
+}
+
+#generate-pdf-btn {
+  background-color: #CE0E2D;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* ===========================================
+   Cover Page Styles
+=========================================== */
+#cover-page {
+  text-align: left;
+  padding: 10px 15px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo1 {
+  width: 60% !important;
+  height: auto !important;
+  background: transparent;
+}
+
+.cover-image {
+  width: 105%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: -15px !important;
+}
+
+.cover-header {
+  text-align: center;
+  margin: 48px 0;
+}
+
+.main-title {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 64px;
+  color: #CE0E2D;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+.info-container {
+  max-width: 1000px;
+  margin: 48px auto;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+  min-width: 250px;
+  font-size: 32px;
+}
+
+.value {
+  font-size: 32px;
+}
+
+/* ===========================================
+   QR Code & Image Styles
+=========================================== */
+.qr-code-section {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qr-code-section h2 {
+  margin-bottom: 20px;
+}
+
+.qrcode {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.responsive-image {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+}
+
+/* ===========================================
+   Chart Styles
+=========================================== */
+.chart-container {
+  background: white;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  height: 400px;
+}
+
+/* ===========================================
+   Header & Footer Styles
+=========================================== */
+.page-header {
+  text-align: left;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #CE0E2D;
+}
+
+.page-footer {
+  padding: 5px 5px;
+  background: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.page-footer h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+.logofooter {
+  height: 25px;
+  background: transparent;
+}
+
+.logofooter1 {
+  height: 25px;
+  background: transparent;
+  padding-right: 20px;
+}
+
+/* ===========================================
+   Loading Overlay Styles
+=========================================== */
+#pdf-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===========================================
+   Magazine-Style Layout - Core Styles
+=========================================== */
+.magazine-style {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+}
+
+.magazine-header {
+  border-bottom: 2px solid #CE0E2D;
+  margin-bottom: 15px;
+  padding: 5px 0;
+}
+
+.magazine-header h2 {
+  font-size: 20px !important;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.highlight {
+  color: #CE0E2D;
+}
+
+/* ===========================================
+   Magazine-Style Layout - Entry Styles
+=========================================== */
+.magazine-entry {
+  margin-bottom: 25px;
+  padding: 0;
+  background-color: white;
+  width: 100%;
+  min-width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.entry-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.defect-id-header {
+  background-color: #000000;
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.defect-badge {
+  background-color: #CE0E2D;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.defect-type-heading {
+  font-size: 18px;
+  color: #CE0E2D;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===========================================
+   Magazine-Style Layout - Data Grid Styles
+=========================================== */
+.magazine-text {
+  padding: 12px 15px;
+  background-color: #ffffff;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.magazine-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.magazine-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 2px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.magazine-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 3px;
+}
+
+.full-width-field {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+  border-top: 1px dashed #eee;
+  padding-top: 5px;
+}
+
+.full-width-field .magazine-value {
+  font-size: 14px;
+}
+
+/* Inflow potential styling */
+.inflow-value {
+  font-weight: 600;
+  padding: 2px 0;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.inflow-emergency {
+  color: #e15759;
+}
+
+.inflow-large {
+  color: #f28e2b;
+}
+
+.inflow-medium {
+  color: #f9d23c;
+}
+
+.inflow-small, .inflow-minimal {
+  color: #5fbb68;
+}
+
+/* ===========================================
+   Magazine-Style Layout - Photo Gallery Styles
+=========================================== */
+.photo-gallery {
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.gallery-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.gallery-title:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #CE0E2D;
+}
+
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.photo-frame {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.magazine-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-caption {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 8px;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ===========================================
+   Magazine-Style Layout - Divider Styles
+=========================================== */
+.magazine-divider {
+  position: relative;
+  height: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.divider-decor {
+  display: inline-block;
+  width: 50%;
+  height: 1px;
+  background-color: #ddd;
+  position: relative;
+}
+
+.divider-decor:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #CE0E2D;
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.magazine-footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.entry-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(206, 14, 45, 0.5), rgba(0, 0, 0, 0));
+  margin: 30px 0;
+}
+
+/* ===========================================
+   Legacy Data Entry Styles (For Backward Compatibility)
+=========================================== */
+.manhole-detail {
+  padding: 20px;
+}
+
+.data-entry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 100%;
+}
+
+.text-data {
+  display: grid;
+  margin-bottom: 5px;
+}
+
+.data-field {
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data-field .label {
+  font-weight: 600;
+  color: #283250;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.data-field .value {
+  font-size: 16px;
+  color: #333;
+  padding: 5px 0;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.photos img {
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* ===========================================
+   Print Styles
+=========================================== */
+@media print {
+  .wrapper {
+    width: 210mm;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .newpage {
+    page-break-before: always;
+    page-break-after: always;
+  }
+
+  .page-break {
+    display: none;
+  }
+
+  .page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .magazine-entry {
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+  
+  .photo-frame {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .photo-frame:hover {
+    transform: none;
+  }
+}
+
+/* Progress overlay extra UI */
+#pdf-loading-overlay {
+  display: none;
+  position: fixed;
+  top: 20px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto !important;
+  height: auto !important;
+  background: transparent;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 9999;
+}
+#pdf-loading-overlay .loading-content {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  width: 340px;
+  text-align: center;
+}
+#pdf-loading-overlay .spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.progressbar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0 6px;
+}
+#pdf-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #2563eb;
+  transition: width 180ms linear;
+}
+#pdf-progress, #pdf-substep {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Appendix styles */
+.appendix-title {
+  font-size: 22px;
+  margin: 8px 0 12px;
+  font-weight: 600;
+  color: #283250;
+}
+.appendix-section {
+  padding: 10mm;
+}
+.appendix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6mm;
+}
+.appendix-card {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px;
+  background: #ffffff;
+}
+.appendix-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #f9fafb;
+}
+.appendix-caption {
+  font-size: 11px;
+  margin-top: 6px;
+  color: #374151;
+  line-height: 1.2;
+}
+
+/* Keep page sizing stable for html2canvas */
+#content-wrapper { background: #9EBED3; }
+.newpage {
+  width: 215.9mm;
+  min-height: 279.4mm;
+  display: block;
+}
+.chart-container img,
+#map + img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================================
+   Defect Page Styles (Matching PDF Layout)
+=========================================== */
+.defect-page { /* inherits .newpage */ }
+.defect-page .section-content {
+  padding: 8mm 8mm 12mm 8mm;
+}
+.defect-page .page-header {
+  border-bottom: 2px solid #CE0E2D;
+  margin-bottom: 8mm;
+  padding: 0;
+}
+.defect-page .page-header h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 6mm 0;
+  font-weight: 700;
+  color: #283250;
+}
+.defect-page .page-header h2::after {
+  content: "Details";
+  color: #CE0E2D;
+  font-weight: 700;
+}
+
+/* Black banner + red badge */
+.defect-banner {
+  width: 100%;
+  background: #282828;
+  height: 15mm;
+  position: relative;
+  margin-bottom: 10mm;
+}
+.defect-id-badge {
+  position: absolute;
+  left: 8mm;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #CE0E2D;
+  color: #fff;
+  padding: 0 4mm;
+  height: 10mm;
+  line-height: 10mm;
+  border-radius: 1.5mm;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-block;
+  margin: 0;
+}
+
+/* Defect type header + divider */
+.defect-type-header {
+  font-size: 16px;
+  color: #CE0E2D;
+  font-weight: 700;
+  margin: 0 0 3mm 0;
+  padding: 0;
+  border: 0;
+}
+.defect-type-divider {
+  height: 0;
+  border: none;
+  border-top: 0.4mm solid #CE0E2D;
+  margin: 0 0 8mm 0;
+}
+
+/* Grid and fields */
+.defect-data-grid {
+  margin-bottom: 8mm;
+}
+.defect-data-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5mm;
+  margin: 0 0 6mm 0;
+  padding: 0 0 6mm 0;
+  border-bottom: 0.2mm solid #DDDDDD;
+}
+.defect-address-row {
+  grid-template-columns: 1fr !important;
+  margin-top: 0.5mm;
+}
+.defect-field {
+  display: flex;
+  flex-direction: column;
+}
+.defect-field-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #505050;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 3mm;
+}
+.defect-field-value {
+  font-size: 13px;
+  color: #282828;
+  line-height: 1.3;
+  word-break: break-word;
+}
+.defect-address-field .defect-field-value {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Photos section */
+.defect-photos-section {
+  margin-top: 8mm;
+  page-break-inside: avoid;
+}
+.defect-photos-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #505050;
+  margin: 0 0 6mm 0;
+  padding: 0 0 4mm 0;
+  border-bottom: 0.2mm solid #DDDDDD;
+}
+.defect-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5mm;
+}
+.defect-photo-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2mm;
+  background: #f5f5f5;
+  box-shadow: none;
+}
+.defect-photo-img {
+  width: 100%;
+  height: calc((100vw - 40mm) * 0.33);
+  max-height: 75mm;
+  object-fit: cover;
+  display: block;
+}
+.defect-photo-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40,40,40,0.85);
+  color: #fff;
+  padding: 2mm 3mm;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* Footer anchoring on web */
+.defect-page .page-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Web view responsiveness */
+@media screen and (max-width: 1024px) {
+  .defect-photo-img { max-height: 60mm; }
+}
+
+/* ===========================================
+   PDF-Specific Defect Page Styles (parity helpers)
+=========================================== */
+.pdf-defect-page { padding: 8mm; background: #fff; }
+.pdf-defect-id-badge {
+  background: #CE0E2D; color: #fff; padding: 0 4mm; height: 10mm; line-height: 10mm;
+  border-radius: 1.5mm; font-weight: 700; font-size: 13px; display: inline-block;
+}
+.pdf-defect-type-header { font-size: 16px; color: #CE0E2D; font-weight: 700; margin: 0 0 3mm 0; padding: 0; border: 0; }
+.pdf-defect-type-divider { height: 0; border: none; border-top: 0.4mm solid #CE0E2D; margin: 0 0 8mm 0; }
+.pdf-defect-data-grid { margin-bottom: 8mm; }
+.pdf-defect-data-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm;
+  margin: 0 0 6mm 0; padding: 0 0 6mm 0; border-bottom: 0.2mm solid #DDDDDD;
+}
+.pdf-defect-address-row { grid-template-columns: 1fr; margin-top: 0.5mm; }
+.pdf-defect-field-label { font-size: 10px; font-weight: 700; color: #505050; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3mm; }
+.pdf-defect-field-value { font-size: 13px; color: #282828; line-height: 1.3; word-break: break-word; }
+.pdf-defect-photos-section { margin-top: 8mm; }
+.pdf-defect-photos-title { font-size: 14px; font-weight: 700; color: #505050; margin: 0 0 6mm 0; padding: 0 0 4mm 0; border-bottom: 0.2mm solid #DDDDDD; }
+.pdf-defect-photos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5mm; }
+.pdf-defect-photo-container { position: relative; overflow: hidden; border-radius: 2mm; background: #f5f5f5; }
+.pdf-defect-photo-overlay { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(40,40,40,0.85); color: #fff; padding: 2mm 3mm; font-size: 10px; line-height: 1.2; }
+
+/* Fine-tune text rendering */
+.pdf-defect-field-value,
+.pdf-defect-type-header,
+.pdf-defect-photos-title {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure images render properly in PDF */
+.pdf-defect-photo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* Address field full width in PDF */
+.pdf-defect-address-field .pdf-defect-field-value {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Maintain consistent margins for PDF rendering */
+.pdf-defect-data-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure proper spacing between sections */
+.pdf-defect-photos-section {
+  page-break-inside: avoid;
+}
+
+/* Double margins for screenshot pages */
+.screenshot-page {
+  padding: 32px !important;
+}
+.screenshot-page .section-content {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* General smoothing for capture parity */
+.defect-page, .pdf-defect-page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Capture-only CSS: hide heavy DOM during PDF export */
+.pdf-capture-mode #defects-container,
+.pdf-capture-mode .defect-photos-section,
+.pdf-capture-mode img.defect-photo-img {
+  display: none !important;
+  visibility: hidden !important;
+  contain: layout paint size !important;
+}
+
+/* Optional safety: pause animations/transforms during capture */
+.pdf-capture-mode * {
+  animation: none !important;
+  transition: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+</style>
+</head>
+<body>
+<div class="wrapper" id="content-wrapper">
+  <!-- PDF Generation Button -->
+  <button id="generate-pdf-btn" class="report-button ml-5">Download PDF</button>
+
+  <!-- Cover Page -->
+  <section class="newpage" id="cover-page">
+    <div class="logo-container">
+      <img alt="logo1" class="logo1" src="/auth/asset_manager/files/Dukes Logo with Tagline_0622-01.png">
+    </div>
+    <img alt="Cover Page Image" class="cover-image" src="/assets/frontpagepic.png">
+    <div class="cover-header">
+      <h1 class="main-title">PROJECT FINDINGS</h1>
+      <h3 class="subtitle">Smoke Testing</h3>
+    </div>
+    <div class="info-container">
+      <div class="info-row">
+        <div class="label">Client:</div>
+        <div class="value" id="clientValue">Loading...</div>
+      </div>
+      <div class="info-row">
+        <div class="label">Location:</div>
+        <div class="value" id="locationValue">Loading...</div>
+      </div>
+      <div class="info-row">
+        <div class="label">Project:</div>
+        <div class="value" id="projectValue">Loading...</div>
+      </div>
+    </div>
+    <div class="page-footer">
+      <h3>800.447.6687 | dukes.com</h3>
+      <img alt="logo" class="logofooter" src="/auth/asset_manager/files/Dukes-Global-Logo.png">
+    </div>
+  </section>
+  <div class="page-break"></div>
+
+  <!-- Executive Summary -->
+  <section class="newpage" id="executive-summary">
+    <header class="page-header">
+      <h2>Smoke Test Report</h2>
+    </header>
+    <div class="section-content">
+      <section>
+        <h3>Why is Smoke Testing Necessary</h3>
+        <p>
+          Smoke testing is one of the most cost-effective methods your utility can use to locate breaks and defects in the public sewer system (sewer mains, service laterals, cross or illegal connections). The smoke is an indication of inflow and infiltration (I&I) that can enter a sewer system during a rain event. This reduces the capacity at the sewer plant, increases treatment costs and can lead to overburdening of the sanitary system, possibly leading to overflows and backups.
+        </p>
+      </section>
+      <section class="pt-5">
+        <h3>How Smoke Testing Works</h3>
+        <p>
+          Blowers are placed in adjoining manholes and a non-toxic liquid smoke is forced through the blowers into the sanitary or storm sewer. Defects in the pipe or manhole structures will create a pathway for the smoke to escape thereby identifying the location of the defects. While smoke is being forced into the sewer, field crews search adjacent areas looking for smoke. When smoke is found, all characteristics are documented including photos and GPS point.
+        </p>
+      </section>
+      <div class="image-container">
+        <img src="/assets/smokediagram.jpg" alt="Smoke Testing Diagram" class="responsive-image">
+      </div>
+    </div>
+    <div class="page-footer">
+      <h3>800.447.6687 | dukes.com</h3>
+      <img alt="logo" class="logofooter" src="/auth/asset_manager/files/Dukes-Global-Logo.png">
+    </div>
+  </section>
+  <div class="page-break"></div>
+
+  <!-- Definitions -->
+  <section class="newpage" id="definitions-section">
+    <div class="page-header">
+      <h2>Definitions</h2>
+    </div>
+    <div class="section-content pt-1">
+      <h3 class="definition-term">Defect Number</h3>
+      <p class="definition-text">Defects are listed sequentially beginning with the number 1, followed by 2, 3, 4, and so on.</p>
+      <h3 class="definition-term">Defect Type</h3>
+      <p class="definition-text">This is the type of defect. Common types of defects are broken cleanouts, or cleanout cap missing.</p>
+      <h3 class="definition-term">Inflow Potential</h3>
+      <p class="definition-text">A numerical score from 1 to 5. 5 indicates inflow could be severe. A score of 1 indicates little to no inflow is possible. This value is the primary indicator to rank the defect.</p>
+      <h3 class="definition-term">Smoke Intensity</h3>
+      <p class="definition-text">A 1-5 score of the intensity of the smoke, with 5 being most severe and 1 being least severe.</p>
+      <h3 class="definition-term">Address</h3>
+      <p class="definition-text">The closest address to the location of smoke.</p>
+      <h3 class="definition-term">Test Number</h3>
+      <p class="definition-text">One smoke test can generate up to dozens of smoke locations.</p>
+      <h3 class="definition-term">Follow Up Actions</h3>
+      <p class="definition-text">Typically during a smoke test, many defects are located. These defects are ranked in terms of severity and are shown on following tables and maps. Follow up CCTV for major defects is required on mainline defects in order to determine corrective measures.</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="qr-code-section pt-5">
+      <h2>QR Code to Watch Video on Smoke Testing:</h2>
+      <img src="/assets/smokeqr.jpg" alt="QR Code for Smoke Testing Video" class="qrcode" />
+    </div>
+    <div class="page-footer">
+      <h3>800.447.6687 | dukes.com</h3>
+      <img alt="logo" class="logofooter" src="/auth/asset_manager/files/Dukes-Global-Logo.png">
+    </div>
+  </section>
+  <div class="page-break"></div>
+
+  <!-- Map -->
+  <section class="newpage" id="map-section">
+    <div class="page-header">
+      <h2>Smoke Testing Map</h2>
+    </div>
+    <div class="section-content">
+      <div id="map" style="width:100%; height:750px;"></div>
+    </div>
+    <div class="page-footer">
+      <h3>800.447.6687 | dukes.com</h3>
+      <img alt="logo" class="logofooter" src="/auth/asset_manager/files/Dukes-Global-Logo.png">
+    </div>
+  </section>
+  <div class="page-break"></div>
+
+  <!-- Charts -->
+  <section class="newpage" id="results-summary">
+    <div class="page-header">
+      <h2>Charts</h2>
+    </div>
+    <div class="section-content">
+      <h3>Inflow Potential Chart</h3>
+      <div id="chartdiv-inflow" class="chart-container"></div>
+      <h3>Defect Breakdown Chart</h3>
+      <div id="defectbreakdown" class="chart-container"></div>
+    </div>
+    <div class="page-footer">
+      <h3>800.447.6687 | dukes.com</h3>
+      <img alt="logo" class="logofooter" src="/auth/asset_manager/files/Dukes-Global-Logo.png">
+    </div>
+  </section>
+  <div class="page-break"></div>
+
+  <!-- Defect Details Container (dynamically populated) -->
+  <div id="defects-container">
+    <!-- Individual defect pages will be inserted here -->
+  </div>
+
+  <!-- Loading Overlay -->
+  <div id="pdf-loading-overlay" style="display:none;">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <p id="pdf-progress">Preparing...</p>
+      <div class="progressbar">
+        <div id="pdf-progress-bar"></div>
+      </div>
+      <p id="pdf-substep" class="substep"></p>
+      <div id="pdf-counters" style="margin-top:6px;font-size:12px;color:#555;">
+        <div>Photos: <span id="photos-processed">0</span>/<span id="photos-total">0</span></div>
+        <div>Defects: <span id="defects-processed">0</span>/<span id="defects-total">0</span></div>
+        <div>Charts: <span id="charts-status">waiting</span> • Map: <span id="map-status">waiting</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* While exporting, keep defect DOM out of the rendering path */
+.pdf-capture-mode #defects-container {
+  display: none !important;
+  visibility: hidden !important;
+  contain: layout paint size !important;
+}
+</style>
+
+<script>
+/* =============================
+   0) Libraries
+============================= */
+(async function loadLibs() {
+  const loadScript = (src) => new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src; s.async = true;
+    s.onload = resolve; s.onerror = () => reject(new Error('Load failed ' + src));
+    document.head.appendChild(s);
+  });
+
+  await loadScript("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js");
+  await loadScript("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js");
+  await loadScript("https://cdn.amcharts.com/lib/5/index.js");
+  await loadScript("https://cdn.amcharts.com/lib/5/xy.js");
+  await loadScript("https://cdn.amcharts.com/lib/5/themes/Animated.js");
+  await loadScript("https://cdn.amcharts.com/lib/5/plugins/exporting.js");
+
+  if (typeof mapboxgl === 'undefined') {
+    await loadScript("https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js");
+    const mapCSS = document.createElement('link');
+    mapCSS.rel = 'stylesheet';
+    mapCSS.href = 'https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css';
+    document.head.appendChild(mapCSS);
+  }
+
+  if (window.am5?.addLicense) {
+    am5.addLicense("AM5C-172612031");
+  }
+})();
+
+/* =============================
+   1) Globals / config
+============================= */
+let globalFilters = { client: [], location: [], project_name: [] };
+
+const DATA_SOURCE_IDS = {
+  smokeDefects: "a282036f-e5f0-4b7b-a5c6-ffb2dd825fcd",
+};
+const DATA_SOURCES = [{
+  id: DATA_SOURCE_IDS.smokeDefects,
+  name: "smokeDefects",
+  columns: ["defect_id","defect_type","inflow_potential","smoke_intensity","address","test_number","client","location","project_name","photos","latitude","longitude"],
+  limit: 250000,
+}];
+
+const PDF = {
+  W: 215.9, H: 279.4, M: 5.5,
+  contentW() { return this.W - 2*this.M; },
+  contentH() { return this.H - 2*this.M; },
+};
+
+const imageCache = new Map();
+const dataUrlCache = new Map();
+const chartRoots = { inflow: null, breakdown: null };
+
+let cachedLogoDataUrl = null;
+
+/* =============================
+   2) Utils
+============================= */
+const delay = (ms) => new Promise(r => setTimeout(r, ms));
+
+function showLoadingOverlay(text) {
+  const overlay = document.getElementById('pdf-loading-overlay');
+  const msg = document.getElementById('pdf-progress');
+  if (msg && text) msg.textContent = text;
+  if (overlay) overlay.style.display = 'flex';
+  setProgress(0, "Starting...");
+}
+function updateLoadingText(text) {
+  const msg = document.getElementById('pdf-progress');
+  if (msg && text) msg.textContent = text;
+}
+function updateSubstep(text) {
+  const el = document.getElementById('pdf-substep');
+  if (el) el.textContent = text || "";
+}
+function setProgress(percent, substep) {
+  const bar = document.getElementById('pdf-progress-bar');
+  if (bar && typeof percent === 'number') {
+    bar.style.width = Math.max(0, Math.min(100, percent)) + "%";
+  }
+  if (substep) updateSubstep(substep);
+}
+function setCounter(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+}
+function hideLoadingOverlay() {
+  const overlay = document.getElementById('pdf-loading-overlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
+function splitPhotoUrls(val) {
+  if (!val) return [];
+  return String(val).split(/[~\n\r]+/g).map(s => s.trim()).filter(Boolean);
+}
+
+async function mapLimit(items, limit, fn) {
+  const ret = new Array(items.length);
+  let i = 0;
+  const workers = new Array(Math.min(limit, items.length)).fill(0).map(async () => {
+    while (i < items.length) {
+      const idx = i++;
+      ret[idx] = await fn(items[idx], idx);
+    }
+  });
+  await Promise.all(workers);
+  return ret;
+}
+
+async function fetchAndDownscaleImage(url, targetMaxWidthPx = 900, quality = 0.50) {
+  if (!url) return "";
+  const cacheKey = `${url}::${targetMaxWidthPx}::${quality}`;
+  if (imageCache.has(cacheKey)) return imageCache.get(cacheKey);
+
+  try {
+    const res = await fetch(url, { mode: 'cors', cache: 'force-cache' });
+    if (!res.ok) {
+      console.warn('Image fetch failed', url, res.status);
+      return url;
+    }
+    const blob = await res.blob();
+
+    const img = await createImageBitmap(blob).catch(async () => {
+      const tmpUrl = URL.createObjectURL(blob);
+      const fallback = await new Promise((resolve, reject) => {
+        const i = new Image();
+        i.crossOrigin = "anonymous";
+        i.onload = () => resolve(i);
+        i.onerror = reject;
+        i.src = tmpUrl;
+      });
+      return fallback;
+    });
+
+    const width = img.width || img.naturalWidth || targetMaxWidthPx;
+    const height = img.height || img.naturalHeight || targetMaxWidthPx;
+    const scale = Math.min(1, targetMaxWidthPx / width);
+    const w = Math.max(1, Math.round(width * scale));
+    const h = Math.max(1, Math.round(height * scale));
+
+    let canvas, ctx;
+    if (typeof OffscreenCanvas !== 'undefined') {
+      canvas = new OffscreenCanvas(w, h);
+      ctx = canvas.getContext('2d', { alpha: false });
+    } else {
+      canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      ctx = canvas.getContext('2d');
+    }
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(img, 0, 0, w, h);
+
+    const outBlob = (canvas.convertToBlob)
+      ? await canvas.convertToBlob({ type: 'image/jpeg', quality })
+      : await new Promise(res2 => canvas.toBlob(res2, 'image/jpeg', quality));
+
+    const objectURL = URL.createObjectURL(outBlob);
+    imageCache.set(cacheKey, objectURL);
+    return objectURL;
+  } catch (e) {
+    console.warn('Image optimization failed', url, e);
+    return url;
+  }
+}
+
+async function toDataURLFromObjectURL(objUrl) {
+  if (!objUrl) return "";
+  if (dataUrlCache.has(objUrl)) return dataUrlCache.get(objUrl);
+  const blob = await fetch(objUrl).then(r => r.blob()).catch(() => null);
+  if (!blob) return "";
+  const dataUrl = await new Promise(res => {
+    const fr = new FileReader();
+    fr.onload = () => res(fr.result);
+    fr.readAsDataURL(blob);
+  });
+  dataUrlCache.set(objUrl, dataUrl);
+  return dataUrl;
+}
+
+async function getLogoDataUrl() {
+  if (cachedLogoDataUrl) return cachedLogoDataUrl;
+
+  try {
+    const logoUrl = '/auth/asset_manager/files/Dukes-Global-Logo.png';
+    const res = await fetch(logoUrl, { mode: 'cors', cache: 'force-cache' });
+    if (!res.ok) return null;
+  
+    const blob = await res.blob();
+    cachedLogoDataUrl = await new Promise(resolve => {
+      const fr = new FileReader();
+      fr.onload = () => resolve(fr.result);
+      fr.readAsDataURL(blob);
+    });
+    return cachedLogoDataUrl;
+  } catch (e) {
+    console.warn('Logo fetch failed', e);
+    return null;
+  }
+}
+
+/* =============================
+   2.5) Capture-Mode Helpers (Defects only)
+============================= */
+function enterPdfCaptureModeForDefects() {
+  // Add class to suppress defects container painting
+  document.documentElement.classList.add('pdf-capture-mode');
+
+  // Stop any ongoing/pending loads of defect images on the page
+  const defectImgs = document.querySelectorAll('#defects-container img.defect-photo-img');
+  defectImgs.forEach(img => {
+    if (!img.dataset._origSrc && img.src && img.src !== 'about:blank') {
+      img.dataset._origSrc = img.src;
+      img.src = 'about:blank';
+    }
+  });
+}
+
+function exitPdfCaptureModeForDefects() {
+  // Restore any temporarily disabled defect images
+  const defectImgs = document.querySelectorAll('#defects-container img.defect-photo-img');
+  defectImgs.forEach(img => {
+    if (img.dataset._origSrc) {
+      img.src = img.dataset._origSrc;
+      delete img.dataset._origSrc;
+    }
+  });
+
+  document.documentElement.classList.remove('pdf-capture-mode');
+}
+
+/* =============================
+   3) Data fetching
+============================= */
+async function getCurrentFilters() {
+  try {
+    const filterResponse = await zPortal.dataSource.get(DATA_SOURCE_IDS.smokeDefects);
+    if (filterResponse && filterResponse.filters) {
+      globalFilters.client = filterResponse.filters.client || [];
+      globalFilters.location = filterResponse.filters.location || [];
+      globalFilters.project_name = filterResponse.filters.project_name || [];
+    }
+  } catch (e) {
+    console.warn('getCurrentFilters error', e);
+  }
+}
+
+async function fetchDataForSource(ds) {
+  const query = {
+    columns: ds.columns,
+    limit: ds.limit || 100000,
+    enabled: true,
+    pristine: false,
+    __source__: ds.id,
+    distinct: !!ds.distinct,
+  };
+  const payload = { dataSourceId: ds.id, queries: [query], filters: globalFilters };
+  try {
+    const results = await zPortal.dataSource.fetchResults(payload);
+    const r0 = results.results?.[0];
+    if (!r0?.data) return [];
+    const names = r0.columns.map(c => c.name);
+    const rows = r0.data.map(row => {
+      const obj = {};
+      names.forEach((n, i) => obj[n] = row[i]);
+      return obj;
+    });
+    return rows;
+  } catch (e) {
+    console.error('fetchDataForSource', ds.name, e);
+    return [];
+  }
+}
+
+/* =============================
+   4) Charts
+============================= */
+function buildInflowData(rows) {
+  const inflowCounts = {};
+  for (const r of rows) {
+    const inflow = r["inflow_potential"] || r["inflowPotential"];
+    if (inflow) inflowCounts[inflow] = (inflowCounts[inflow] || 0) + 1;
+  }
+  const order = [
+    '5 = Emergency - Extreme Inflow',
+    '4 = Large Amount of Inflow',
+    '3 = Medium Inflow',
+    '2 = Small Inflow',
+    '1 = Little to Zero Inflow'
+  ];
+  return Object.entries(inflowCounts)
+    .map(([k,v]) => ({ "Inflow Potential": k, "Number of Defects": v }))
+    .sort((a,b) => order.indexOf(a["Inflow Potential"]) - order.indexOf(b["Inflow Potential"]));
+}
+
+function buildDefectTypeData(rows) {
+  const defectCounts = {};
+  for (const r of rows) {
+    const defect = r["defect_type"] || r["defectType"];
+    if (defect) defectCounts[defect] = (defectCounts[defect] || 0) + 1;
+  }
+  return Object.entries(defectCounts)
+    .map(([k,v]) => ({ "Defect Type": k, "Number of Defects": v }))
+    .sort((a,b) => a["Number of Defects"] - b["Number of Defects"]);
+}
+
+function renderInflowChartOnPage(data) {
+  if (!window.am5 || !window.am5xy) return;
+  if (chartRoots.inflow) { try { chartRoots.inflow.dispose(); } catch(e) {} chartRoots.inflow = null; }
+
+  const root = am5.Root.new("chartdiv-inflow");
+  root.setThemes([am5themes_Animated.new(root)]);
+
+  const chart = root.container.children.push(am5xy.XYChart.new(root, { layout: root.verticalLayout }));
+  const yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "Inflow Potential",
+    renderer: am5xy.AxisRendererY.new(root, { inversed: true }),
+  }));
+  const xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, { renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 50 }) }));
+
+  const colors = {
+    '5 = Emergency - Extreme Inflow': am5.color(0xD12D1C),
+    '4 = Large Amount of Inflow': am5.color(0xE79137),
+    '3 = Medium Inflow': am5.color(0xF1CE63),
+    '2 = Small Inflow': am5.color(0x4AB99D),
+    '1 = Little to Zero Inflow': am5.color(0x094F51),
+  };
+
+  const series = chart.series.push(am5xy.ColumnSeries.new(root, {
+    name: "Count",
+    xAxis, yAxis,
+    valueXField: "Number of Defects",
+    categoryYField: "Inflow Potential",
+    tooltip: am5.Tooltip.new(root, { labelText: "{categoryY}: {valueX}" })
+  }));
+
+  series.columns.template.adapters.add("fill", (fill, target) => {
+    const k = target.dataItem?.dataContext?.["Inflow Potential"];
+    return colors[k] || am5.color(0x283250);
+  });
+  series.columns.template.adapters.add("stroke", (stroke, target) => {
+    const k = target.dataItem?.dataContext?.["Inflow Potential"];
+    return colors[k] || am5.color(0x283250);
+  });
+
+  yAxis.data.setAll(data);
+  series.data.setAll(data);
+
+  chartRoots.inflow = root;
+}
+
+function renderBreakdownChartOnPage(data) {
+  if (!window.am5 || !window.am5xy) return;
+  if (chartRoots.breakdown) { try { chartRoots.breakdown.dispose(); } catch(e) {} chartRoots.breakdown = null; }
+
+  const root = am5.Root.new("defectbreakdown");
+  root.setThemes([am5themes_Animated.new(root)]);
+
+  const chart = root.container.children.push(am5xy.XYChart.new(root, { layout: root.verticalLayout }));
+  const yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    categoryField: "Defect Type",
+    renderer: am5xy.AxisRendererY.new(root, { minGridDistance: 10, cellStartLocation: 0, cellEndLocation: 1 }),
+    visible: true
+  }));
+  yAxis.get("renderer").labels.template.setAll({ visible: true, forceHidden: false });
+
+  const xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+    renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 50 })
+  }));
+
+  const series = chart.series.push(am5xy.ColumnSeries.new(root, {
+    name: "Count",
+    xAxis, yAxis,
+    valueXField: "Number of Defects",
+    categoryYField: "Defect Type",
+    fill: am5.color(0x283250),
+    stroke: am5.color(0x283250),
+  }));
+
+  yAxis.data.setAll(data);
+  series.data.setAll(data);
+
+  chartRoots.breakdown = root;
+}
+
+async function exportChartPNGFromRoot(root, containerIdForFallback) {
+  try {
+    const exportingNS = window.am5exporting || window.am5plugins_exporting || null;
+    if (root && exportingNS && exportingNS.Exporting) {
+      await delay(100);
+      const exporter = exportingNS.Exporting.new(root, {});
+      const uri = await exporter.getImage("png");
+      if (uri) return uri;
+    }
+  } catch (e) {
+    console.warn("amCharts export failed, will try html2canvas fallback", e);
+  }
+  try {
+    const el = document.getElementById(containerIdForFallback);
+    if (!el) return null;
+    const canvas = await html2canvas(el, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      imageTimeout: 8000,
+      removeContainer: true
+    });
+    return canvas.toDataURL("image/png", 0.92);
+  } catch (e) {
+    console.warn("html2canvas chart fallback failed", e);
+    return null;
+  }
+}
+
+/* =============================
+   5) Map
+============================= */
+let mapboxInstance = null;
+function initializeMap(rows) {
+  const mapEl = document.getElementById('map');
+  if (!mapEl || !rows?.length) return;
+
+  const valid = rows.filter(r => r.latitude && r.longitude && !isNaN(r.latitude) && !isNaN(r.longitude));
+  if (!valid.length) return;
+
+  const avgLat = valid.reduce((s, r) => s + parseFloat(r.latitude), 0) / valid.length;
+  const avgLon = valid.reduce((s, r) => s + parseFloat(r.longitude), 0) / valid.length;
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY3VzdG9tZXJzdWNjZXNzLXp1YXIiLCJhIjoiY2x5aGU5bjlvMDNwdzJrb2VobGNvZ2t2MyJ9.1y3hdT18NP-GPcXLOVVvBQ';
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [avgLon, avgLat],
+    zoom: 12,
+    preserveDrawingBuffer: true
+  });
+  mapboxInstance = map;
+
+  map.on('load', () => {
+    map.addSource('mh_points', {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features: valid.map(p => ({
+          type: 'Feature',
+          geometry: { type: 'Point', coordinates: [parseFloat(p.longitude), parseFloat(p.latitude)] },
+          properties: {
+            defect_id: p.defect_id,
+            defect_type: p.defect_type || '',
+            address: p.address || '',
+            inflow_potential: p.inflow_potential || ''
+          }
+        }))
+      }
+    });
+
+    map.addLayer({
+      'id': 'points',
+      'type': 'circle',
+      'source': 'mh_points',
+      'paint': {
+        'circle-radius': { 'base': 1.75, 'stops': [[12, 4], [22, 180]] },
+        'circle-color': [
+          'match', ['get', 'inflow_potential'], 
+          '1 = Little to Zero Inflow', '#094F51',
+          '2 = Small Inflow', '#4AB99D',
+          '3 = Medium Inflow', '#F1CE63',
+          '4 = Large Amount of Inflow', '#E79137',
+          '5 = Emergency - Extreme Inflow', '#D12D1C',
+          '#BAB0AC'
+        ],
+        'circle-stroke-width': 1.5,
+        'circle-stroke-color': '#333333'
+      }
+    });
+    // Adjust map view to include all points nicely
+    const bounds = new mapboxgl.LngLatBounds();
+    valid.forEach(p => bounds.extend([parseFloat(p.longitude), parseFloat(p.latitude)]));
+    
+    // Apply fitBounds once everything is ready
+    map.fitBounds(bounds, {
+      padding: 40,   // adjust space around edges (PDF safe area)
+      maxZoom: 16,   // prevent zooming in too far
+      duration: 0    // instant for consistent PDF render
+    });
+  });
+}
+
+function exportMapPNG() {
+  try {
+    if (!mapboxInstance) return null;
+    const canvas = mapboxInstance.getCanvas();
+    return canvas.toDataURL('image/png');
+  } catch (e) {
+    console.warn('Map export failed', e);
+    return null;
+  }
+}
+
+/* =============================
+   6) Populate cover metadata
+============================= */
+function populateDataFromFirstRow(rows) {
+  const first = Array.isArray(rows) && rows.length ? rows[0] : null;
+  document.getElementById("clientValue").textContent = first?.client ?? "N/A";
+  document.getElementById("locationValue").textContent = first?.location ?? "N/A";
+  document.getElementById("projectValue").textContent = first?.project_name ?? "N/A";
+}
+
+/* =============================
+   6.5) Render Defects on Page (1 per page, matching PDF)
+============================= */
+function renderDefectsOnPage(rows) {
+  const container = document.getElementById('defects-container');
+  if (!container || !rows?.length) return;
+
+  container.innerHTML = ''; // Clear
+
+  rows.forEach((defect, index) => {
+    const photos = splitPhotoUrls(defect.photos);
+    const photoCount = photos.length;
+
+    const page = document.createElement('section');
+    page.className = 'newpage defect-page';
+
+    const defectTypeHeader = defect.defect_type ? `
+      <h3 class="defect-type-header">${defect.defect_type}</h3>
+      <hr class="defect-type-divider" />
+    ` : '';
+
+    page.innerHTML = `
+      <div class="page-header">
+        <h2>Smoke Analysis</h2>
+      </div>
+
+      <div class="section-content">
+        <!-- Black banner with red badge -->
+        <div class="defect-banner">
+          <div class="defect-id-badge">Defect ID: ${defect.defect_id || 'N/A'}</div>
+        </div>
+
+        ${defectTypeHeader}
+
+        <!-- Data Grid (3 columns) -->
+        <div class="defect-data-grid">
+          <div class="defect-data-row">
+            <div class="defect-field">
+              <div class="defect-field-label">LOCATION</div>
+              <div class="defect-field-value">${defect.location || 'N/A'}</div>
+            </div>
+            <div class="defect-field">
+              <div class="defect-field-label">CLIENT</div>
+              <div class="defect-field-value">${defect.client || 'N/A'}</div>
+            </div>
+            <div class="defect-field">
+              <div class="defect-field-label">PROJECT NAME</div>
+              <div class="defect-field-value">${defect.project_name || 'N/A'}</div>
+            </div>
+          </div>
+
+          <div class="defect-data-row">
+            <div class="defect-field">
+              <div class="defect-field-label">TEST NUMBER</div>
+              <div class="defect-field-value">${defect.test_number || 'N/A'}</div>
+            </div>
+            <div class="defect-field">
+              <div class="defect-field-label">INFLOW POTENTIAL</div>
+              <div class="defect-field-value">${defect.inflow_potential || 'N/A'}</div>
+            </div>
+            <div class="defect-field">
+              <div class="defect-field-label">SMOKE INTENSITY</div>
+              <div class="defect-field-value">${defect.smoke_intensity || 'N/A'}</div>
+            </div>
+          </div>
+
+          <div class="defect-data-row defect-address-row">
+            <div class="defect-field defect-address-field">
+              <div class="defect-field-label">ADDRESS</div>
+              <div class="defect-field-value">${defect.address || 'N/A'}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photos Section -->
+        ${photoCount > 0 ? `
+          <div class="defect-photos-section">
+            <h4 class="defect-photos-title">Site Photos</h4>
+            <div class="defect-photos-grid">
+              ${photos.slice(0, 4).map((url, i) => `
+                <div class="defect-photo-container">
+                  <img src="${url}" alt="Defect photo ${i+1}" class="defect-photo-img" loading="lazy" referrerpolicy="no-referrer">
+                  <div class="defect-photo-overlay">Photo ${i+1}: ${(defect.defect_type ? defect.defect_type + ' - ' : '') + (defect.address || '')}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+      </div>
+
+      <div class="page-footer">
+        <h3>800.447.6687 | dukes.com</h3>
+        <img alt="logo" class="logofooter" src="/auth/asset_manager/files/Dukes-Global-Logo.png">
+      </div>
+    `;
+
+    container.appendChild(page);
+
+    if (index < rows.length - 1) {
+      const pageBreak = document.createElement('div');
+      pageBreak.className = 'page-break';
+      container.appendChild(pageBreak);
+    }
+  });
+}
+
+/* =============================
+   7) PDF composition
+============================= */
+function newPDF() {
+  const { jsPDF } = window.jspdf;
+  return new jsPDF({ compress: true, orientation: 'p', unit: 'mm', format: 'letter' });
+}
+
+const BRAND = {
+  red: { r: 206, g: 14, b: 45 },
+  text: { r: 40, g: 50, b: 80 }
+};
+
+async function drawFooter(pdf, logoDataUrl) {
+  const y = PDF.H - PDF.M + 3;
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(10);
+  pdf.setTextColor(70);
+  pdf.text('800.447.6687 | dukes.com', PDF.M, y);
+
+  if (logoDataUrl) {
+    const logoW = 34;
+    const logoH = 6;
+    const logoX = PDF.W - PDF.M - logoW;
+    const logoY = y - logoH + 1;
+    try {
+      pdf.addImage(logoDataUrl, 'PNG', logoX, logoY, logoW, logoH, undefined, 'FAST');
+    } catch (e) {
+      console.warn('Failed to add footer logo', e);
+    }
+  }
+}
+
+function drawHeader(pdf, title) {
+  const titleY = PDF.M + 8;
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(18);
+
+  if (title === 'Smoke Analysis Details') {
+    pdf.setTextColor(BRAND.text.r, BRAND.text.g, BRAND.text.b);
+    pdf.text('Smoke Analysis', PDF.M, titleY);
+    pdf.setTextColor(BRAND.red.r, BRAND.red.g, BRAND.red.b);
+    const detailsText = 'Details';
+    const detailsWidth = pdf.getTextWidth(detailsText);
+    pdf.text(detailsText, PDF.W - PDF.M - detailsWidth, titleY);
+  } else {
+    pdf.setTextColor(BRAND.text.r, BRAND.text.g, BRAND.text.b);
+    if (title) pdf.text(String(title), PDF.M, titleY);
+  }
+
+  pdf.setDrawColor(BRAND.red.r, BRAND.red.g, BRAND.red.b);
+  pdf.setLineWidth(0.6);
+  const ruleY = title ? titleY + 7 : PDF.M + 8;
+  pdf.line(PDF.M, ruleY, PDF.W - PDF.M, ruleY);
+
+  return ruleY + 9;
+}
+
+function ensurePage(pdf, isFirstPage) {
+  if (!isFirstPage) pdf.addPage();
+}
+
+async function screenshotFullPageSection(sectionId) {
+  const el = document.getElementById(sectionId);
+  if (!el) return null;
+
+  try {
+    const canvas = await html2canvas(el, {
+      backgroundColor: '#ffffff',
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      imageTimeout: 8000,
+      removeContainer: true,
+      width: el.scrollWidth,
+      height: el.scrollHeight
+    });
+
+    return canvas.toDataURL('image/png', 0.92);
+  } catch (e) {
+    console.warn('Failed to screenshot section', sectionId, e);
+    return null;
+  }
+}
+
+function addFullPageScreenshot(pdf, imgDataUrl, isFirstPage = false) {
+  if (!imgDataUrl) return;
+
+  ensurePage(pdf, isFirstPage);
+
+  const pageW = PDF.W;
+  const pageH = PDF.H;
+
+  try {
+    pdf.addImage(imgDataUrl, 'PNG', 0, 0, pageW, pageH, undefined, 'FAST');
+  } catch (e) {
+    console.warn('Failed to add full page screenshot', e);
+  }
+}
+
+function addChartsSection(pdf, inflowPng, breakdownPng, logoDataUrl) {
+  ensurePage(pdf, false);
+  let y = drawHeader(pdf, 'Charts');
+
+  const maxW = PDF.contentW();
+  const h = maxW * 0.5;
+
+  pdf.setFont('helvetica', 'bold'); pdf.setFontSize(13);
+  pdf.text('Inflow Potential', PDF.M, y); y += 5;
+  if (inflowPng) {
+    pdf.addImage(inflowPng, 'PNG', PDF.M, y, maxW, h, undefined, 'FAST');
+    y += h + 8;
+  } else {
+    y += 6;
+  }
+
+  pdf.text('Defect Breakdown', PDF.M, y); y += 5;
+  if (breakdownPng) {
+    pdf.addImage(breakdownPng, 'PNG', PDF.M, y, maxW, h, undefined, 'FAST');
+  }
+
+  drawFooter(pdf, logoDataUrl);
+}
+
+async function addDefectPage(pdf, defect, photoDataUrls, logoDataUrl) {
+  ensurePage(pdf, false);
+  let y = drawHeader(pdf, 'Smoke Analysis Details');
+
+  const left = PDF.M;
+  const cw = PDF.contentW();
+
+  // Defect ID Badge on black banner
+  const defectIdText = `Defect ID: ${defect.defect_id ?? 'N/A'}`;
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(13);
+  const textWidth = pdf.getTextWidth(defectIdText);
+  const paddingX = 4;
+  const boxHeight = 10;
+  const boxWidth = textWidth + 2 * paddingX;
+  const boxRadius = 1.5;
+
+  const bannerHeight = 15;
+  const bannerY = y - 2;
+  pdf.setFillColor(40, 40, 40);
+  pdf.rect(left, bannerY, cw, bannerHeight, 'F'); 
+
+  const badgeY = bannerY + (bannerHeight - boxHeight) / 2;
+
+  pdf.setFillColor(BRAND.red.r, BRAND.red.g, BRAND.red.b);
+  pdf.roundedRect(left + 5, badgeY, boxWidth, boxHeight, boxRadius, boxRadius, 'F');
+
+  pdf.setTextColor(255, 255, 255);
+  const textY = badgeY + boxHeight - 3;
+  pdf.text(defectIdText, left + 5 + paddingX, textY);
+
+  y = bannerY + bannerHeight + 14; 
+
+  if (defect.defect_type) {
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(16);
+    pdf.setTextColor(BRAND.red.r, BRAND.red.g, BRAND.red.b);
+    pdf.text(defect.defect_type, left, y);
+    y += 3;
+    pdf.setDrawColor(BRAND.red.r, BRAND.red.g, BRAND.red.b);
+    pdf.setLineWidth(0.4);
+    pdf.line(left, y, PDF.W - PDF.M, y);
+    y += 8;
+  }
+
+  // Data grid
+  pdf.setFontSize(10);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setTextColor(80, 80, 80);
+
+  const row1Labels = ['LOCATION', 'CLIENT', 'PROJECT NAME'];
+  const row1Values = [defect.location, defect.client, defect.project_name];
+  const row2Labels = ['TEST NUMBER', 'INFLOW POTENTIAL', 'SMOKE INTENSITY'];
+  const row2Values = [defect.test_number, defect.inflow_potential, defect.smoke_intensity];
+
+  const colCount = 3;
+  const colWidth = (cw - (colCount - 1) * 5) / colCount;
+
+  function drawRow(labels, values) {
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(10);
+    pdf.setTextColor(80, 80, 80);
+    for (let i = 0; i < colCount; i++) {
+      const x = left + i * (colWidth + 5);
+      pdf.text(labels[i], x, y);
+    }
+    y += 7;
+
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(13);
+    pdf.setTextColor(40, 40, 40);
+    const linesPerCol = [];
+    for (let i = 0; i < colCount; i++) {
+      const x = left + i * (colWidth + 5);
+      const valLines = pdf.splitTextToSize(values[i] ?? 'N/A', colWidth);
+      linesPerCol.push(valLines.length);
+      pdf.text(valLines, x, y);
+    }
+    const maxLines = Math.max(...linesPerCol, 1);
+    y += maxLines * 5 + 6;
+
+    pdf.setDrawColor(221, 221, 221);
+    pdf.setLineWidth(0.2);
+    pdf.line(left, y - 2, left + colCount * (colWidth + 5) - 5, y - 2);
+    y += 6;
+  }
+
+  drawRow(row1Labels, row1Values);
+  drawRow(row2Labels, row2Values);
+
+  // Address full-width
+  if (defect.address) {
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(10);
+    pdf.setTextColor(80, 80, 80);
+    pdf.text('ADDRESS', left, y);
+    y += 8;
+
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(13);
+    pdf.setTextColor(40, 40, 40);
+    const lines = pdf.splitTextToSize(defect.address, cw);
+    pdf.text(lines, left, y);
+    y += lines.length * 5 + 6;
+
+    pdf.setDrawColor(221, 221, 221);
+    pdf.setLineWidth(0.2);
+    pdf.line(left, y - 2, left + cw, y - 2);
+    y += 6;
+  }
+
+  // Photos
+  if (photoDataUrls.length > 0) {
+    if (y + 18 > PDF.H - PDF.M - 60) { 
+      await drawFooter(pdf, logoDataUrl); 
+      ensurePage(pdf, false); 
+      y = drawHeader(pdf, 'Smoke Analysis Details'); 
+    }
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(14);
+    pdf.setTextColor(80, 80, 80);
+    pdf.text('Site Photos', left, y);
+    y += 6;
+    pdf.setDrawColor(221, 221, 221);
+    pdf.setLineWidth(0.2);
+    pdf.line(left, y - 4, PDF.W - PDF.M, y - 4);
+    y += 4;
+  }
+
+  const maxInline = 4;
+  const inline = photoDataUrls.slice(0, maxInline);
+  const imgW = (cw - 5) / 2;
+  const imgH = imgW * 0.66;
+
+  for (let i = 0; i < inline.length; i++) {
+    if (i % 2 === 0) {
+      if (y + imgH + 20 > PDF.H - PDF.M - 12) { 
+        await drawFooter(pdf, logoDataUrl); 
+        ensurePage(pdf, false); 
+        y = drawHeader(pdf, 'Smoke Analysis Details'); 
+      }
+    }
+    const x = left + (i % 2 === 0 ? 0 : imgW + 5);
+  
+    try { 
+      pdf.addImage(inline[i], 'JPEG', x, y, imgW, imgH, undefined, 'FAST'); 
+    } catch {}
+
+    const defectTypePrefix = defect.defect_type ? `${defect.defect_type} - ` : '';
+    const desc = `Photo ${i+1}: ${defectTypePrefix}${defect.address || ''}`;
+    const overlayHeight = 7;
+    pdf.setFillColor(40, 40, 40);
+    pdf.rect(x, y + imgH - overlayHeight, imgW, overlayHeight, 'F');
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(7);
+    pdf.setTextColor(255, 255, 255);
+    const descLines = pdf.splitTextToSize(desc, imgW - 4);
+    pdf.text(descLines, x + 2, y + imgH - 2);
+
+    if (i % 2 === 1) y += imgH + 10;
+  }
+  if (inline.length % 2 === 1) y += imgH + 10;
+
+  await drawFooter(pdf, logoDataUrl);
+  return photoDataUrls.slice(maxInline);
+}
+
+function addAppendixPages(pdf, appendixPhotos, logoDataUrl) {
+  if (!appendixPhotos.length) return;
+  const pageCap = 9;
+  const cellCols = 3;
+  const gap = 4;
+
+  for (let i = 0; i < appendixPhotos.length; i += pageCap) {
+    ensurePage(pdf, false);
+    let y = drawHeader(pdf, 'Appendix: Photos');
+
+    const gridTop = y + 4;
+    const gridW = PDF.contentW();
+    const cellW = (gridW - gap * (cellCols - 1)) / cellCols;
+    const cellH = cellW;
+
+    appendixPhotos.slice(i, i + pageCap).forEach((item, idx) => {
+      const row = Math.floor(idx / cellCols);
+      const col = idx % cellCols;
+      const x = PDF.M + col * (cellW + gap);
+      const yy = gridTop + row * (cellH + 14 + gap);
+      try { pdf.addImage(item.dataUrl, 'JPEG', x, yy, cellW, cellH, undefined, 'FAST'); } catch {}
+      pdf.setFont('helvetica', 'normal'); pdf.setFontSize(9);
+      const caption = `Defect ${item.defect_id || ''} — ${item.defect_type || ''} — ${item.address || ''}`;
+      const capLines = pdf.splitTextToSize(caption, cellW);
+      pdf.text(capLines, x, yy + cellH + 5);
+    });
+
+    drawFooter(pdf, logoDataUrl);
+  }
+}
+
+/* =============================
+   8) Main PDF generation
+============================= */
+async function generatePDF() {
+  // Enter capture mode to prevent defect DOM/image loading from competing
+  enterPdfCaptureModeForDefects();
+
+  showLoadingOverlay("Preparing data...");
+  setCounter('charts-status', 'capturing...');
+  setCounter('map-status', 'initializing...');
+
+  try {
+    const logoDataUrl = await getLogoDataUrl();
+
+    await getCurrentFilters();
+    const rows = await fetchDataForSource(DATA_SOURCES[0]);
+    if (!rows?.length) {
+      hideLoadingOverlay();
+      alert('No data to render.');
+      return;
+    }
+
+    rows.sort((a,b) => (parseInt(a.defect_id)||0) - (parseInt(b.defect_id)||0));
+    populateDataFromFirstRow(rows);
+
+    updateLoadingText("Capturing cover page...");
+    setProgress(10, "Screenshotting pages 1-3...");
+    const coverScreenshot = await screenshotFullPageSection('cover-page');
+
+    updateLoadingText("Capturing executive summary...");
+    const summaryScreenshot = await screenshotFullPageSection('executive-summary');
+
+    updateLoadingText("Capturing definitions...");
+    const definitionsScreenshot = await screenshotFullPageSection('definitions-section');
+
+    updateLoadingText("Capturing charts...");
+    setProgress(25, "Exporting charts...");
+    try { chartRoots.inflow?.animations?.pauseAll?.(); } catch(e) {}
+    try { chartRoots.breakdown?.animations?.pauseAll?.(); } catch(e) {}
+    const inflowPNG = await exportChartPNGFromRoot(chartRoots.inflow, 'chartdiv-inflow');
+    const breakdownPNG = await exportChartPNGFromRoot(chartRoots.breakdown, 'defectbreakdown');
+    setCounter('charts-status', (inflowPNG || breakdownPNG) ? 'done' : 'empty');
+
+    updateLoadingText("Capturing map...");
+    setProgress(30, "Exporting map...");
+    initializeMap(rows);
+    await delay(1500);
+    let mapPNG = exportMapPNG();
+    setCounter('map-status', mapPNG ? 'done' : 'empty');
+
+    // Aggregate photos for defects (independent of DOM)
+    const allPhotoUrls = [];
+    const recordPhotos = new Array(rows.length);
+    for (let i = 0; i < rows.length; i++) {
+      const photos = splitPhotoUrls(rows[i].photos);
+      recordPhotos[i] = photos;
+      for (const u of photos) allPhotoUrls.push({ idx: i, url: u });
+    }
+    setCounter('photos-total', allPhotoUrls.length);
+    setCounter('photos-processed', 0);
+    setCounter('defects-total', rows.length);
+    setCounter('defects-processed', 0);
+
+    updateLoadingText("Optimizing images...");
+    setProgress(35, "Processing photos...");
+    const INLINE_MAX_W = 900, APPENDIX_MAX_W = 700;
+    let photosProcessed = 0;
+    await mapLimit(allPhotoUrls, 6, async (item) => {
+      const objUrl = await fetchAndDownscaleImage(item.url, INLINE_MAX_W, 0.78);
+      item.objUrl = objUrl;
+      photosProcessed++;
+      if (photosProcessed % 10 === 0 || photosProcessed === allPhotoUrls.length) {
+        setCounter('photos-processed', photosProcessed);
+      }
+    });
+
+    updateLoadingText("Assembling PDF...");
+    setProgress(50, "Creating pages...");
+    const pdf = newPDF();
+
+    addFullPageScreenshot(pdf, coverScreenshot, true);
+    addFullPageScreenshot(pdf, summaryScreenshot, false);
+    addFullPageScreenshot(pdf, definitionsScreenshot, false);
+
+    if (mapPNG) {
+      ensurePage(pdf, false);
+      let y = drawHeader(pdf, 'Smoke Testing Map');
+
+      const maxW = PDF.contentW();
+      const maxH = (PDF.H - PDF.M) - y - 12;
+
+      let w = maxW, h = Math.min(maxH, maxW * 0.6);
+      try {
+        const tmpImg = new Image();
+        await new Promise((res, rej) => {
+          tmpImg.onload = res; tmpImg.onerror = rej; tmpImg.src = mapPNG;
+        });
+        const ratio = tmpImg.height / tmpImg.width;
+        h = Math.min(maxH, w * ratio);
+      } catch {}
+
+      pdf.addImage(mapPNG, 'PNG', PDF.M, y, w, h, undefined, 'FAST');
+      await drawFooter(pdf, logoDataUrl);
+    }
+
+    addChartsSection(pdf, inflowPNG, breakdownPNG, logoDataUrl);
+
+    const appendixItems = [];
+    setProgress(60, "Rendering defect pages...");
+    for (let i = 0; i < rows.length; i++) {
+      updateSubstep(`Defect ${i+1} of ${rows.length}`);
+      const row = rows[i];
+      const photoUrls = recordPhotos[i];
+
+      const prepared = [];
+      const MAX_PREPARE = Math.min(photoUrls.length, 8);
+      for (let k = 0; k < MAX_PREPARE; k++) {
+        const item = allPhotoUrls.find(a => a.idx === i && a.url === photoUrls[k]);
+        if (!item) continue;
+        const dataUrl = await toDataURLFromObjectURL(item.objUrl);
+        prepared.push({ dataUrl, url: item.url });
+      }
+
+      await addDefectPage(pdf, row, prepared.map(p => p.dataUrl), logoDataUrl);
+
+      const remaining = prepared.slice(4).concat(
+        photoUrls.slice(prepared.length).map(u => ({ url: u, dataUrl: null }))
+      );
+
+      for (const rem of remaining) {
+        if (!rem.dataUrl) {
+          const objUrl = await fetchAndDownscaleImage(rem.url, APPENDIX_MAX_W, 0.78);
+          rem.dataUrl = await toDataURLFromObjectURL(objUrl);
+        }
+        appendixItems.push({
+          defect_id: row.defect_id,
+          defect_type: row.defect_type,
+          address: row.address,
+          dataUrl: rem.dataUrl
+        });
+      }
+
+      setCounter('defects-processed', i + 1);
+    }
+
+    setProgress(85, "Adding appendix...");
+    if (appendixItems.length) addAppendixPages(pdf, appendixItems, logoDataUrl);
+
+    setProgress(95, "Finalizing PDF...");
+    pdf.setProperties({
+      title: 'Condition Assessment Report',
+      creator: 'Dukes Portal',
+      creationDate: new Date()
+    });
+
+    const timestamp = new Date().toISOString().split('T')[0];
+    const client = (document.getElementById('clientValue')?.textContent || 'Unknown').replace(/\s+/g, '_');
+    const filename = `Smoke_Testing_Report_${client}_${timestamp}.pdf`;
+
+    setProgress(100, "Saving...");
+    pdf.save(filename);
+  } finally {
+    hideLoadingOverlay();
+    exitPdfCaptureModeForDefects();
+    try { chartRoots.inflow?.animations?.playAll?.(); } catch(e) {}
+    try { chartRoots.breakdown?.animations?.playAll?.(); } catch(e) {}
+  }
+}
+
+/* =============================
+   9) Boot
+============================= */
+(async function main() {
+  try {
+    await getCurrentFilters();
+    const rows = await fetchDataForSource(DATA_SOURCES[0]);
+    populateDataFromFirstRow(rows);
+    initializeMap(rows);
+
+    const inflowData = buildInflowData(rows);
+    const defectData = buildDefectTypeData(rows);
+    renderInflowChartOnPage(inflowData);
+    renderBreakdownChartOnPage(defectData);
+  
+    // Render defects on page (1 per page, matching PDF)
+    renderDefectsOnPage(rows);
+
+    document.getElementById('generate-pdf-btn')?.addEventListener('click', generatePDF);
+  } catch (e) {
+    console.error("Initialization error:", e);
+    const cont = document.querySelector(".wrapper");
+    const div = document.createElement("div");
+    div.className = "loading";
+    div.textContent = "An error occurred while building the report. See console for details.";
+    cont?.appendChild(div);
+  }
+})();
+</script>
+
+</body>
+</html>
