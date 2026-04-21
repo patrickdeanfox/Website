@@ -9,7 +9,7 @@ A [Next.js 15](https://nextjs.org/) portfolio site with an admin console, AI-ass
 - **Database:** PostgreSQL via Prisma 6
 - **Auth:** NextAuth
 - **Storage:** AWS S3 (resume/upload assets)
-- **AI:** Abacus.AI for chat / job-relevance analysis
+- **AI:** Anthropic Claude (Sonnet 4.6) for chat / job-relevance analysis, with prompt caching
 
 ## Project layout
 
@@ -40,10 +40,11 @@ App runs at http://localhost:3000.
 
 | Var | Purpose |
 | --- | --- |
-| `DATABASE_URL` | Postgres connection string |
+| `DATABASE_URL` | Postgres connection string (pooled, for app traffic) |
+| `DIRECT_URL` | Unpooled Postgres connection (for Prisma migrations). Required when using Neon / pgbouncer. |
 | `NEXTAUTH_SECRET` | NextAuth session encryption |
 | `NEXTAUTH_URL` | Canonical site URL (e.g. `https://your-domain.com`) |
-| `ABACUSAI_API_KEY` | Abacus.AI API key for chat / job analysis |
+| `ANTHROPIC_API_KEY` | Anthropic API key (chat + job-relevance analysis use Claude Sonnet 4.6) |
 | `AWS_REGION` | e.g. `us-west-2` |
 | `AWS_BUCKET_NAME` | S3 bucket for uploads |
 | `AWS_FOLDER_PREFIX` | Key prefix inside the bucket |
@@ -58,7 +59,11 @@ App runs at http://localhost:3000.
 4. Add every env var from the table above in **Project Settings → Environment Variables**.
 5. Deploy. Subsequent pushes to `main` trigger production deploys; PRs get preview deploys.
 
-Prisma runs at build time via Next.js, so no extra build command is needed. If you change the schema, run `pnpm prisma migrate deploy` against your production database before deploying.
+The `postinstall` script runs `prisma generate` automatically so the Prisma client is built on every Vercel install. If you change the schema, run `pnpm prisma migrate deploy` against your production database before deploying.
+
+### Using Vercel's managed Postgres (Neon)
+
+In the Vercel dashboard: **Storage → Create Database → Neon**. Vercel auto-injects both `DATABASE_URL` (pooled) and `DIRECT_URL` (unpooled) into every environment — no manual config needed. `prisma/schema.prisma` already references both.
 
 ## Scripts
 
