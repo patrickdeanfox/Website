@@ -1,69 +1,29 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FileText, Download, ExternalLink, Building2, Calendar, MapPin, ArrowRight, Loader2, FileCheck } from 'lucide-react'
+import { FileText, Download, ExternalLink, Building2, Calendar, MapPin, ArrowRight, FileCheck } from 'lucide-react'
 import RelevancePopup from '@/components/relevance-popup'
 import { useContent } from '@/lib/content-context'
 import Image from 'next/image'
 
-// Resume Download Button Component
 function ResumeDownloadButton({ format }: { format: 'standard' | 'ats' }) {
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState('')
-
-  const handleDownload = async () => {
-    setIsLoading(true)
-    setError('')
-
-    try {
-      const response = await fetch('/api/export-resume', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ format })
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to generate resume')
-      }
-
-      // Create blob from response and trigger download
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = format === 'ats' ? 'Patrick_Fox_Resume_ATS.pdf' : 'Patrick_Fox_Resume.pdf'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      window.URL.revokeObjectURL(url)
-    } catch (err) {
-      setError('Download failed')
-      console.error(err)
-    } finally {
-      setIsLoading(false)
-    }
+  const handleDownload = () => {
+    const url = format === 'ats' ? '/resume-print?format=ats' : '/resume-print'
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
     <button
       onClick={handleDownload}
-      disabled={isLoading}
-      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all disabled:opacity-70 ${
+      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
         format === 'standard'
           ? 'bg-blue-500 hover:bg-blue-600 text-white'
           : 'bg-teal-500/20 hover:bg-teal-500/30 text-teal-400 border border-teal-500/30'
       }`}
     >
-      {isLoading ? (
-        <Loader2 className="w-4 h-4 animate-spin" />
-      ) : format === 'ats' ? (
-        <FileCheck className="w-4 h-4" />
-      ) : (
-        <Download className="w-4 h-4" />
-      )}
-      {isLoading ? 'Generating...' : format === 'ats' ? 'ATS-Optimized' : 'Download PDF'}
+      {format === 'ats' ? <FileCheck className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+      {format === 'ats' ? 'ATS-Optimized' : 'Download PDF'}
     </button>
   )
 }
