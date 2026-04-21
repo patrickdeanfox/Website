@@ -12,6 +12,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import RelevancePopup from '@/components/relevance-popup'
+import { portalProjects as portalProjectsData } from '@/lib/portal-projects-data'
 
 const iconMap: Record<string, LucideIcon> = {
   Building2, Users, BarChart3, Database, Code2, Target, TrendingUp, LineChart,
@@ -52,22 +53,16 @@ export default function Projects() {
   const carouselRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    async function fetchProjects() {
-      try {
-        const response = await fetch('/api/admin/portal-projects/visible')
-        if (response.ok) {
-          const data = await response.json()
-          setProjects(data)
-        }
-      } catch (error) {
-        console.error('Failed to fetch projects:', error)
-      } finally {
-        setLoading(false)
-        // Small delay to mark first render complete after content is visible
-        setTimeout(() => setIsFirstRender(false), 100)
-      }
-    }
-    fetchProjects()
+    const mapped: PortalProject[] = portalProjectsData.map((p) => ({
+      ...p,
+      screenshots: p.defaultScreenshots,
+      isVisible: true,
+      flagshipBadge: p.flagshipBadge ?? '',
+      initialSize: 'full',
+    }))
+    setProjects(mapped)
+    setLoading(false)
+    setTimeout(() => setIsFirstRender(false), 100)
   }, [])
 
   const getIcon = (iconName: string) => iconMap[iconName] || Building2
