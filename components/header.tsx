@@ -2,18 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, User, Briefcase, FolderOpen, Bot, FileText, Building2, Linkedin, Code2, Settings, Terminal, Quote } from 'lucide-react'
+import { Menu, X, User, FolderOpen, FileText, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 const navItems = [
   { name: 'Projects', href: '#projects', icon: FolderOpen, isAnchor: true },
   { name: 'About', href: '#about', icon: User, isAnchor: true },
   { name: 'Career', href: '#career', icon: FileText, isAnchor: true },
-  { name: 'AI', href: '#ai', icon: Bot, isAnchor: true },
-  { name: 'Code', href: '#code', icon: Terminal, isAnchor: true },
-  { name: 'Testimonials', href: '#testimonials', icon: Quote, isAnchor: true },
-  { name: 'Meta', href: '/meta', icon: Code2, isAnchor: false },
-  { name: 'Admin', href: '/admin', icon: Settings, isAnchor: false },
+  { name: 'Resume', href: '#resume', icon: FileText, isAnchor: true },
+  { name: 'Contact', href: '#contact', icon: Mail, isAnchor: true },
 ]
 
 export default function Header() {

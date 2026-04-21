@@ -5,12 +5,11 @@ import { Providers } from '@/components/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const dynamic = 'force-dynamic'
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
   title: 'Patrick Fox | Analytics Implementation Manager',
-  description: 'Full-Stack BI Developer & AI Integration Specialist with 13+ years of experience. Explore my portfolio of analytics implementations, data engineering projects, and AI solutions.',
+  description:
+    'Full-Stack BI Developer & AI Integration Specialist with 13+ years of experience. Explore my portfolio of analytics implementations, data engineering projects, and AI solutions.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
@@ -30,14 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
-      </head>
       <body className={`${inter.className} bg-slate-950 text-white antialiased`}>
-        <div data-hydration-error style={{display: 'none !important'}}></div>
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
