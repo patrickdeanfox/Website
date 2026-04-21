@@ -30,9 +30,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
-      </head>
       <body className={`${inter.className} bg-slate-950 text-white antialiased`}>
         <div data-hydration-error style={{display: 'none !important'}}></div>
         <Providers>

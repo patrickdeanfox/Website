@@ -3,63 +3,38 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { 
-  FileText, Download, Building2, Calendar, MapPin, 
-  Loader2, FileCheck, Warehouse, Package, Database, 
-  BarChart3, Users, CheckCircle2, ChevronDown, ChevronUp, Zap, 
+import {
+  FileText, Download, Building2, Calendar, MapPin,
+  FileCheck, Warehouse, Package, Database,
+  BarChart3, Users, CheckCircle2, ChevronDown, ChevronUp, Zap,
   Server, LineChart, Boxes, Briefcase, BookOpen
 } from 'lucide-react'
 import RelevancePopup from '@/components/relevance-popup'
 import { useContent } from '@/lib/content-context'
 import Image from 'next/image'
 
-// Icon mapping for dynamic icon rendering
 const iconMap: Record<string, any> = {
-  Warehouse, Package, Database, BarChart3, Users, 
+  Warehouse, Package, Database, BarChart3, Users,
   Zap, Server, LineChart, Boxes, Building2, Briefcase
 }
 
-// Resume Download Button Component
 function ResumeDownloadButton({ format }: { format: 'standard' | 'ats' }) {
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleDownload = async () => {
-    setIsLoading(true)
-    try {
-      const response = await fetch('/api/export-resume', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ format })
-      })
-      if (!response.ok) throw new Error('Failed to generate resume')
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = format === 'ats' ? 'Patrick_Fox_Resume_ATS.pdf' : 'Patrick_Fox_Resume.pdf'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      window.URL.revokeObjectURL(url)
-    } catch (err) {
-      console.error(err)
-    } finally {
-      setIsLoading(false)
-    }
+  const handleDownload = () => {
+    const url = format === 'ats' ? '/resume-print?format=ats' : '/resume-print'
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
     <button
       onClick={handleDownload}
-      disabled={isLoading}
-      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all disabled:opacity-70 ${
+      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
         format === 'standard'
           ? 'bg-blue-500 hover:bg-blue-600 text-white'
           : 'bg-teal-500/20 hover:bg-teal-500/30 text-teal-400 border border-teal-500/30'
       }`}
     >
-      {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : format === 'ats' ? <FileCheck className="w-4 h-4" /> : <Download className="w-4 h-4" />}
-      {isLoading ? 'Generating...' : format === 'ats' ? 'ATS-Optimized' : 'Download PDF'}
+      {format === 'ats' ? <FileCheck className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+      {format === 'ats' ? 'ATS-Optimized' : 'Download PDF'}
     </button>
   )
 }

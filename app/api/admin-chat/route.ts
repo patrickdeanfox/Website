@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { portfolioItems } from '@/lib/portfolio-data'
 import { portalProjects } from '@/lib/portal-projects-data'
+import { anthropic, CLAUDE_MODEL } from '@/lib/anthropic'
+import type Anthropic from '@anthropic-ai/sdk'
 
 interface ChatMessage {
   role: 'user' | 'assistant'
@@ -11,13 +13,12 @@ export async function POST(request: NextRequest) {
   try {
     const { message, history } = await request.json()
 
-    // Build portfolio context
-    const portfolioContext = portfolioItems.map(item =>
+    const portfolioContext = portfolioItems.map((item) =>
       `${item.title}: ${item.description}`
     ).join('\n')
 
-    const projectsContext = portalProjects.map(p =>
-      `Project: ${p.client}\nIndustry: ${p.industry}\nTitle: ${p.title}\nChallenge: ${p.challenge}\nSolution: ${p.solution}\nTechnical: ${p.technical.map(t => `${t.area}: ${t.details}`).join('; ')}\nOutcomes: ${p.outcomes.map(o => o.text).join('; ')}`
+    const projectsContext = portalProjects.map((p) =>
+      `Project: ${p.client}\nIndustry: ${p.industry}\nTitle: ${p.title}\nChallenge: ${p.challenge}\nSolution: ${p.solution}\nTechnical: ${p.technical.map((t) => `${t.area}: ${t.details}`).join('; ')}\nOutcomes: ${p.outcomes.map((o) => o.text).join('; ')}`
     ).join('\n\n---\n\n')
 
     const systemPrompt = `You are Patrick Fox's personal portfolio content assistant. Your job is to help Patrick:
@@ -57,77 +58,52 @@ KEEP RESPONSES:
 
 You're helping Patrick build the most compelling portfolio possible. Be an engaged collaborator who asks good follow-up questions.`
 
-    // Build messages array
-    const chatMessages: Array<{ role: string; content: string }> = [
-      { role: 'system', content: systemPrompt }
-    ]
+    const chatMessages: Anthropic.MessageParam[] = []
 
-    // Add conversation history (last 10 messages)
     if (history && Array.isArray(history)) {
       history.slice(-10).forEach((msg: ChatMessage) => {
         chatMessages.push({ role: msg.role, content: msg.content })
       })
     }
 
-    // Add current message
     chatMessages.push({ role: 'user', content: message })
 
-    // Call LLM
-    const response = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.ABACUSAI_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: 'gpt-4.1-mini',
-        messages: chatMessages,
-        max_tokens: 1500,
-        temperature: 0.7
-      })
+    const response = await anthropic.messages.create({
+      model: CLAUDE_MODEL,
+      max_tokens: 2048,
+      system: [
+        {
+          type: 'text',
+          text: systemPrompt,
+          cache_control: { type: 'ephemeral' },
+        },
+      ],
+      messages: chatMessages,
     })
 
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.error('LLM API error:', errorText)
-      return NextResponse.json(
-        { error: 'Failed to generate response' },
-        { status: 500 }
-      )
-    }
-
-    const data = await response.json()
-    const responseContent = data.choices?.[0]?.message?.content
+    const textBlock = response.content.find((b) => b.type === 'text')
+    const responseContent = textBlock && textBlock.type === 'text' ? textBlock.text : ''
 
     if (!responseContent) {
-      return NextResponse.json(
-        { error: 'No response generated' },
-        { status: 500 }
-      )
+      return NextResponse.json({ error: 'No response generated' }, { status: 500 })
     }
 
-    // Try to extract any structured data from the response
     let extractedData = null
     try {
-      // Look for JSON blocks in the response
       const jsonMatch = responseContent.match(/```json\n([\s\S]*?)\n```/)
       if (jsonMatch) {
         extractedData = JSON.parse(jsonMatch[1])
       }
     } catch (e) {
-      // No structured data found, that's fine
+      // No structured data — fine
     }
 
     return NextResponse.json({
       response: responseContent.replace(/```json\n[\s\S]*?\n```/g, '').trim(),
-      extractedData
+      extractedData,
     })
-
   } catch (error) {
     console.error('Admin chat error:', error)
-    return NextResponse.json(
-      { error: 'An error occurred' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'An error occurred' }, { status: 500 })
   }
 }

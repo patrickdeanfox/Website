@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { portfolioItems } from '@/lib/portfolio-data'
+import { anthropic, CLAUDE_MODEL } from '@/lib/anthropic'
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,8 +13,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create a comprehensive prompt for the LLM
-    const portfolioSummary = portfolioItems.map(item => 
+    const portfolioSummary = portfolioItems.map((item) =>
       `ID: ${item.id}\nType: ${item.type}\nCategory: ${item.category}\nTitle: ${item.title}\nDescription: ${item.description}\nKeywords: ${item.keywords.join(', ')}`
     ).join('\n\n')
 
@@ -53,35 +53,26 @@ IMPORTANT:
 
 Respond with raw JSON only. Do not include code blocks, markdown, or any other formatting.`
 
-    const response = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.ABACUSAI_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: 'gpt-4.1-mini',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: `Please analyze this job description and create relevance mappings:\n\n${jobDescription}` }
-        ],
-        response_format: { type: 'json_object' },
-        max_tokens: 4000,
-        temperature: 0.7
-      })
+    const response = await anthropic.messages.create({
+      model: CLAUDE_MODEL,
+      max_tokens: 4096,
+      system: [
+        {
+          type: 'text',
+          text: systemPrompt,
+          cache_control: { type: 'ephemeral' },
+        },
+      ],
+      messages: [
+        {
+          role: 'user',
+          content: `Please analyze this job description and create relevance mappings:\n\n${jobDescription}`,
+        },
+      ],
     })
 
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.error('LLM API error:', errorText)
-      return NextResponse.json(
-        { error: 'Failed to analyze job description' },
-        { status: 500 }
-      )
-    }
-
-    const data = await response.json()
-    const content = data.choices?.[0]?.message?.content
+    const textBlock = response.content.find((b) => b.type === 'text')
+    const content = textBlock && textBlock.type === 'text' ? textBlock.text : ''
 
     if (!content) {
       return NextResponse.json(
@@ -100,7 +91,6 @@ Respond with raw JSON only. Do not include code blocks, markdown, or any other f
         { status: 500 }
       )
     }
-
   } catch (error) {
     console.error('Analysis error:', error)
     return NextResponse.json(
